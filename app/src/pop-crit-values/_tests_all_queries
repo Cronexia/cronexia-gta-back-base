@@ -1,0 +1,175 @@
+query Tests_popCritValue {
+  popCritValue_findUnique: popCritValue(
+    id: "00000000-0000-0000-909c-700000000001"
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findUniqueWithRelations: popCritValue(
+    id: "00000000-0000-0000-909c-700000000001"
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+  popCritValue_findFirst: popCritValueFindFirst {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstSkip: popCritValueFindFirst(skip: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstTake: popCritValueFindFirst(take: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWhere: popCritValueFindFirst(
+    where: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstOrderBy: popCritValueFindFirst(orderBy: {id: desc}) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstCursor: popCritValueFindFirst(
+    cursor: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstDistinct: popCritValueFindFirst(distinct: allFields) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWhereOpen: popCritValueFindFirst(
+    whereOpen: {valueStr: {contains: "c"}}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstOrderByOpen: popCritValueFindFirst(
+    orderByOpen: [{valueStr: "desc"}, {id: "desc"}]
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWithRelations: popCritValueFindFirst {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+  popCritValue_findMany: popCritValues {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManySkip: popCritValues(skip: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyTake: popCritValues(take: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWhere: popCritValues(
+    where: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyOrderBy: popCritValues(orderBy: {id: desc}) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyCursor: popCritValues(
+    cursor: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyDistinct: popCritValues(distinct: allFields) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWhereOpen: popCritValues(
+    whereOpen: {valueStr: {contains: "c"}}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyOrderByOpen: popCritValues(
+    orderByOpen: [{valueStr: "desc"}, {id: "desc"}]
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWithRelations: popCritValues {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+}

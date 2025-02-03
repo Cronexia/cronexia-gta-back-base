@@ -1,0 +1,165 @@
+# https://dev.to/vishnucprasad/establishing-postgresql-connection-with-typeorm-in-nestjs-4le3
+# docker-compose -f docker-compose-database-postgresql.yml -p 'cronexia-gta-app' up
+
+services:
+  ## * 💾 Database / PostgreSQL
+  # Server name is "db_postgres" in adminer UI
+  # 🔑 max / example
+  db_postgres:
+    # https://hub.docker.com/_/postgres/tags
+    image: postgres:17.2-bookworm
+    container_name: cronexia_db_postgres
+
+    env_file:
+      - .env
+    ports:
+      - 5433:5432
+    volumes:
+      - db_postgres__data:/var/lib/postgresql/data
+    
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8192M
+        reservations:
+          cpus: '1'
+          memory: 2048M
+
+  ## * 💾👷 Database admin / Adminer
+  # 🔑 max / example
+  db_admin:
+    # https://hub.docker.com/_/adminer/tags
+    image: adminer:4.8.1-standalone
+    container_name: cronexia_db_admin
+
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - 8080:8080
+
+  # # ! 👨‍💻⚡️ Slow to reset and unused for the moment
+  # # ## * 💾👷 Database admin / PgAdmin4
+  # # # 🔑 max@cronexia.com / bref
+  db_admin_pg:
+    #   # https://hub.docker.com/r/dpage/pgadmin4/tags
+    #image: dpage/pgadmin4:latest
+    image: dpage/pgadmin4:8.14.0
+    container_name: cronexia_db_admin_pg
+
+    depends_on:
+      - db_postgres
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - 8081:5050
+    volumes:
+      #     ### pgAdmin volume management
+      #     #       https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html#mapped-files-and-directories
+      #     ### Docker volume management
+      #     #       https://docs.docker.com/engine/storage/volumes/
+      #     #       https://docs.docker.com/engine/storage/bind-mounts/
+      #     #       https://docs.docker.com/reference/compose-file/services/#volumes
+
+      #     ### Binded to project local directories
+      #     ### Exported files from database dumps, & servers config exports
+      #- type: bind
+      #  source: ./docker/volumes-bind/pgadmin/home
+      #  target: /var/lib/pgadmin/storage
+      #     ### Sessions, user files, etc.
+      #      - type: bind
+      #        source: ./docker/volumes-bind/pgadmin/var/lib/pgadmin
+      #        target: /var/lib/pgadmin
+      #     ### Override configuration settings
+      #     ##    https://www.pgadmin.org/docs/pgadmin4/development/config_py.html
+      - type: bind
+        source: ./docker/volumes-bind/pgadmin/config/pgadmin4/config_local.py
+        target: /pgadmin4/config_local.py
+      #     ### Server definitions found in it will be loaded at launch time.
+      #     ##    https://www.pgadmin.org/docs/pgadmin4/development/import_export_servers.html
+      - type: bind
+        source: ./docker/volumes-bind/pgadmin/config/pgadmin4/servers.json
+        target: /pgadmin4/servers.json
+      #     ## Custom backup directory
+      #     - type: bind
+      #       source: ./docker/volumes-bind/pgadmin/home
+      #       target: /backups
+      #     ### Named volume
+      #     ## UI preferences from Files > Preference
+      - db_admin_pg__pref:/pgadmin4/preferences.json
+  #     ## Custom 
+  #     # - db_admin_pg__dump:/backup
+
+  ## * ⚡️🟥 Cache / Redis
+  # 🔑 default / bof
+  cache_redis:
+    # https://hub.docker.com/_/redis/tags
+    image: redis:8.0-M02-bookworm
+    command: /bin/sh -c "redis-server --requirepass $$REDIS_PASSWORD"
+    container_name: cronexia_cache
+    env_file:
+      - .env
+    ports:
+      # Redis
+      - 6379:6379
+    volumes:
+      - cache_redis__data:/data
+
+  # 🔑 bob / bof
+  # 📝 cronexia-gta/_docs/05-cache-implementation.md
+  # cache_redis:
+  #   # image: redis:latest
+  #   # image: redis:7.4-rc2-alpine # Build a custom image v
+  #   # Custom user and pass, disable default user
+  #   build:
+  #     context: ./docker/redis
+  #     dockerfile: Dockerfile.dev
+  #   container_name: cronexia_cache
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     # Redis
+  #     - 6379:6379
+  #   volumes:
+  #     - cache_redis__data:/data
+
+  ## * ⚡️🟥👀 Cache admin / Redis Insights
+  cache_redis_admin:
+    # https://hub.docker.com/r/redis/redisinsight/tags
+    # image: redis/redisinsight:latest
+    image: redis/redisinsight:2.64
+    container_name: cronexia_cache_admin
+
+    depends_on:
+      - cache_redis
+    env_file:
+      - .env
+    ports:
+      # Redis Admin : Redis Insight
+      - 5540:5540
+    volumes:
+      - cache_redis_admin__data:/data
+
+  ## * 🟥 Cache / Redis dédié aux 🛣️🌊 Queues & Flows
+  # 🔑 default / bof
+  cache_redis_queues:
+    # https://hub.docker.com/_/redis/tags
+    image: redis:8.0-M02-bookworm
+    command: /bin/sh -c "redis-server --requirepass $$REDIS_PASSWORD"
+    container_name: cronexia_cache_queues
+    env_file:
+      - .env
+    ports:
+      # 🚨 Port alternatif en sortie de container
+      - 6381:6379
+    volumes:
+      - cache_redis_queues__data:/data
+
+volumes:
+  db_admin_pg__pref:
+  db_postgres__data:
+  cache_redis__data:
+  cache_redis_admin__data:
+  cache_redis_queues__data:

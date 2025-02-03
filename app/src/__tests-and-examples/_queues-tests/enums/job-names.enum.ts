@@ -1,0 +1,6 @@
+export enum JOB_NAMES {
+  SUM = 'SUM',
+  SUBTRACT = 'SUBTRACT',
+  MULTIPLY = 'MULTIPLY',
+  DIVISION = 'DIVISION',
+}

@@ -1,0 +1,9235 @@
+query TestsAllQueries {
+  badgeOnResource_findUnique: badgeOnResource(
+    id: "00000000-0000-0000-0b05-000000000001"
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findUniqueWithRelations: badgeOnResource(
+    id: "00000000-0000-0000-0b05-000000000001"
+  ) {
+    effectDateStart
+    effectDateEnd
+    badge {
+      badgeNumber
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  badgeOnResource_findFirst: badgeOnResourceFindFirst {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstSkip: badgeOnResourceFindFirst(skip: 1) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstTake: badgeOnResourceFindFirst(take: 1) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstWhere: badgeOnResourceFindFirst(
+    where: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstOrderBy: badgeOnResourceFindFirst(
+    orderBy: {effectDateStart: desc}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstCursor: badgeOnResourceFindFirst(
+    cursor: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstDistinct: badgeOnResourceFindFirst(distinct: allFields) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstWhereOpen: badgeOnResourceFindFirst(
+    whereOpen: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstOrderByOpen: badgeOnResourceFindFirst(
+    orderByOpen: [{effectDateStart: "desc"}, {effectDateEnd: "desc"}]
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findFirstWithRelations: badgeOnResourceFindFirst {
+    effectDateStart
+    effectDateEnd
+    badge {
+      badgeNumber
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  badgeOnResource_findMany: badgeOnResources {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManySkip: badgeOnResources(skip: 1) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyTake: badgeOnResources(take: 1) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyWhere: badgeOnResources(
+    where: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyOrderBy: badgeOnResources(
+    orderBy: {effectDateStart: desc}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyCursor: badgeOnResources(
+    cursor: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyDistinct: badgeOnResources(distinct: allFields) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyWhereOpen: badgeOnResources(
+    whereOpen: {id: "00000000-0000-0000-0b05-000000000001"}
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyOrderByOpen: badgeOnResources(
+    orderByOpen: [{effectDateStart: "desc"}, {effectDateEnd: "desc"}]
+  ) {
+    effectDateStart
+    effectDateEnd
+  }
+  badgeOnResource_findManyWithRelations: badgeOnResources {
+    effectDateStart
+    effectDateEnd
+    badge {
+      badgeNumber
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  badge_findUniqueByBadgeNumber: badge(badgeNumber: "0000000001") {
+    badgeNumber
+  }
+  badge_findUnique: badge(id: "00000000-0000-0000-000b-000000000001") {
+    badgeNumber
+  }
+  badge_findUniqueWithRelations: badge(badgeNumber: "0000000001") {
+    badgeNumber
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  badge_findFirst: badgeFindFirst {
+    badgeNumber
+  }
+  badge_findFirstSkip: badgeFindFirst(skip: 1) {
+    badgeNumber
+  }
+  badge_findFirstTake: badgeFindFirst(take: 1) {
+    badgeNumber
+  }
+  badge_findFirstWhere: badgeFindFirst(where: {badgeNumber: "0000000001"}) {
+    badgeNumber
+  }
+  badge_findFirstOrderBy: badgeFindFirst(orderBy: {badgeNumber: desc}) {
+    badgeNumber
+  }
+  badge_findFirstCursor: badgeFindFirst(
+    cursor: {id: "00000000-0000-0000-000b-000000000001"}
+  ) {
+    badgeNumber
+  }
+  badge_findFirstDistinct: badgeFindFirst(distinct: allFields) {
+    badgeNumber
+  }
+  badge_findFirstWhereOpen: badgeFindFirst(
+    whereOpen: {badgeNumber: {contains: "1"}}
+  ) {
+    badgeNumber
+  }
+  badge_findFirstOrderByOpen: badgeFindFirst(
+    orderByOpen: [{id: "desc"}, {badgeNumber: "desc"}]
+  ) {
+    badgeNumber
+  }
+  badge_findFirstWithRelations: badgeFindFirst {
+    badgeNumber
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  badge_findMany: badges {
+    badgeNumber
+  }
+  badge_findManySkip: badges(skip: 1) {
+    badgeNumber
+  }
+  badge_findManyTake: badges(take: 1) {
+    badgeNumber
+  }
+  badge_findManyWhere: badges(where: {badgeNumber: "0000000001"}) {
+    badgeNumber
+  }
+  badge_findManyOrderBy: badges(orderBy: {badgeNumber: desc}) {
+    badgeNumber
+  }
+  badge_findManyCursor: badges(
+    cursor: {id: "00000000-0000-0000-000b-000000000001"}
+  ) {
+    badgeNumber
+  }
+  badge_findManyDistinct: badges(distinct: allFields) {
+    badgeNumber
+  }
+  badge_findManyWhereOpen: badges(whereOpen: {badgeNumber: {contains: "1"}}) {
+    badgeNumber
+  }
+  badge_findManyOrderByOpen: badges(
+    orderByOpen: [{id: "desc"}, {badgeNumber: "desc"}]
+  ) {
+    badgeNumber
+  }
+  badge_findManyWithRelations: badges {
+    badgeNumber
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  calendarDayEnumStrVal_findUnique: calendarDayEnumStrVal(
+    id: "00000000-0000-0000-0000-000000005123"
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findUniqueWithRelations: calendarDayEnumStrVal(
+    id: "00000000-0000-0000-0000-000000005123"
+  ) {
+    fieldnameHelper
+    value
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDayEnumStrVal_findFirst: calendarDayEnumStrValFindFirst {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstSkip: calendarDayEnumStrValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstTake: calendarDayEnumStrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstWhere: calendarDayEnumStrValFindFirst(
+    where: {fieldnameHelper: "dayType"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstOrderBy: calendarDayEnumStrValFindFirst(
+    orderBy: {value: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstCursor: calendarDayEnumStrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000005123"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstDistinct: calendarDayEnumStrValFindFirst(
+    distinct: allFields
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstWhereOpen: calendarDayEnumStrValFindFirst(
+    whereOpen: {value: {contains: "o"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstOrderByOpen: calendarDayEnumStrValFindFirst(
+    orderByOpen: [{value: "desc"}, {fieldnameHelper: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findFirstWithRelations: calendarDayEnumStrValFindFirst {
+    fieldnameHelper
+    value
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDayEnumStrVal_findMany: calendarDayEnumStrVals {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManySkip: calendarDayEnumStrVals(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyTake: calendarDayEnumStrVals(take: 1) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyWhere: calendarDayEnumStrVals(
+    where: {fieldnameHelper: "dayType"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyOrderBy: calendarDayEnumStrVals(
+    orderBy: {value: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyCursor: calendarDayEnumStrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000005123"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyDistinct: calendarDayEnumStrVals(
+    distinct: allFields
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyWhereOpen: calendarDayEnumStrVals(
+    whereOpen: {value: {contains: "o"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyOrderByOpen: calendarDayEnumStrVals(
+    orderByOpen: [{value: "desc"}, {fieldnameHelper: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  calendarDayEnumStrVal_findManyWithRelations: calendarDayEnumStrVals {
+    fieldnameHelper
+    value
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDayEnumVal_findUnique: calendarDayEnumVal(
+    id: "00000000-0000-0000-0000-000000000128"
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findUniqueWithRelations: calendarDayEnumVal(
+    id: "00000000-0000-0000-0000-000000000128"
+  ) {
+    fieldnameHelper
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumStrVal {
+      fieldnameHelper
+      value
+    }
+    calendarDay {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  calendarDayEnumVal_findFirst: calendarDayEnumValFindFirst {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstSkip: calendarDayEnumValFindFirst(skip: 1) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstTake: calendarDayEnumValFindFirst(take: 1) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstWhere: calendarDayEnumValFindFirst(
+    where: {fieldnameHelper: "dayType"}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstOrderBy: calendarDayEnumValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstCursor: calendarDayEnumValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000128"}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstDistinct: calendarDayEnumValFindFirst(
+    distinct: allFields
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstWhereOpen: calendarDayEnumValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "a"}}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstOrderByOpen: calendarDayEnumValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {id: "desc"}]
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findFirstWithRelations: calendarDayEnumValFindFirst {
+    fieldnameHelper
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumStrVal {
+      fieldnameHelper
+      value
+    }
+    calendarDay {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  calendarDayEnumVal_findMany: calendarDayEnumVals {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManySkip: calendarDayEnumVals(skip: 1) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyTake: calendarDayEnumVals(take: 1) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyWhere: calendarDayEnumVals(
+    where: {fieldnameHelper: "dayType"}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyOrderBy: calendarDayEnumVals(
+    whereOpen: {fieldnameHelper: {contains: "a"}}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyCursor: calendarDayEnumVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyDistinct: calendarDayEnumVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {id: "desc"}]
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyWhereOpen: calendarDayEnumVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000128"}
+  ) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyOrderByOpen: calendarDayEnumVals(distinct: allFields) {
+    fieldnameHelper
+  }
+  calendarDayEnumVal_findManyWithRelations: calendarDayEnumVals {
+    fieldnameHelper
+    calendarDayEnum {
+      name
+      type
+    }
+    calendarDayEnumStrVal {
+      fieldnameHelper
+      value
+    }
+    calendarDay {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  calendarDayEnum_findUniqueByName: calendarDayEnum(name: "dayType") {
+    name
+    type
+  }
+  calendarDayEnum_findUnique: calendarDayEnum(
+    id: "00000000-0000-0000-0000-000000004122"
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findUniqueWithRelations: calendarDayEnum(name: "dayType") {
+    name
+    type
+    calendarDayEnumStrVals {
+      fieldnameHelper
+      value
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDayEnum_findFirst: calendarDayEnumFindFirst {
+    name
+    type
+  }
+  calendarDayEnum_findFirstTake: calendarDayEnumFindFirst(take: 1) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstWhere: calendarDayEnumFindFirst(
+    where: {name: "dayType"}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstOrderBy: calendarDayEnumFindFirst(
+    orderBy: {name: desc}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstCursor: calendarDayEnumFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000004122"}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstDistinct: calendarDayEnumFindFirst(distinct: allFields) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstWhereOpen: calendarDayEnumFindFirst(
+    whereOpen: {name: {contains: "a"}}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstOrderByOpen: calendarDayEnumFindFirst(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findFirstWithRelations: calendarDayEnumFindFirst {
+    name
+    type
+    calendarDayEnumStrVals {
+      fieldnameHelper
+      value
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDayEnum_findMany: calendarDayEnums {
+    name
+    type
+  }
+  calendarDayEnum_findManyTake: calendarDayEnums(take: 1) {
+    name
+    type
+  }
+  calendarDayEnum_findManyWhere: calendarDayEnums(where: {name: "dayType"}) {
+    name
+    type
+  }
+  calendarDayEnum_findManyOrderBy: calendarDayEnums(orderBy: {name: desc}) {
+    name
+    type
+  }
+  calendarDayEnum_findManyCursor: calendarDayEnums(
+    cursor: {id: "00000000-0000-0000-0000-000000004122"}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findManyDistinct: calendarDayEnums(distinct: allFields) {
+    name
+    type
+  }
+  calendarDayEnum_findManyWhereOpen: calendarDayEnums(
+    whereOpen: {name: {contains: "a"}}
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findManyOrderByOpen: calendarDayEnums(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+  }
+  calendarDayEnum_findManyWithRelations: calendarDayEnums(take: 10) {
+    name
+    type
+    calendarDayEnumStrVals {
+      fieldnameHelper
+      value
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findUniqueByDate: calendarDay(date: "2023-12-24") {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findUnique: calendarDay(id: "00000000-0000-0000-0000-000000005125") {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findUniqueWithRelations: calendarDay(date: "2023-12-24") {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findFirst: calendarDayFindFirst {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstSkip: calendarDayFindFirst(skip: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstTake: calendarDayFindFirst(take: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWhere: calendarDayFindFirst(where: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWhereOpen: calendarDayFindFirst(
+    whereOpen: {labelShort: {contains: "t"}}
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstOrderBy: calendarDayFindFirst(orderBy: {labelShort: desc}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstOrderByOpen: calendarDayFindFirst(
+    orderByOpen: [{date: "desc"}, {labelShort: "desc"}]
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstCursor: calendarDayFindFirst(cursor: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstDistinct: calendarDayFindFirst(distinct: allFields) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWithRelations: calendarDayFindFirst {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findMany: calendarDays {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManySkip: calendarDays(skip: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyTake: calendarDays(take: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWhere: calendarDays(where: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWhereOpen: calendarDays(
+    whereOpen: {labelShort: {contains: "t"}}
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyOrderBy: calendarDays(orderBy: {labelShort: desc}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyOrderByOpen: calendarDays(
+    orderByOpen: [{date: "desc"}, {labelShort: "desc"}]
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyCursor: calendarDays(cursor: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyDistinct: calendarDays(distinct: allFields) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWithRelations: calendarDays {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findUniqueByDate: calendarDay(date: "2023-12-24") {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findUnique: calendarDay(id: "00000000-0000-0000-0000-000000005125") {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findUniqueWithRelations: calendarDay(date: "2023-12-24") {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findFirst: calendarDayFindFirst {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstSkip: calendarDayFindFirst(skip: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstTake: calendarDayFindFirst(take: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWhere: calendarDayFindFirst(where: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWhereOpen: calendarDayFindFirst(
+    whereOpen: {labelShort: {contains: "t"}}
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstOrderBy: calendarDayFindFirst(orderBy: {labelShort: desc}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstOrderByOpen: calendarDayFindFirst(
+    orderByOpen: [{date: "desc"}, {labelShort: "desc"}]
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstCursor: calendarDayFindFirst(cursor: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstDistinct: calendarDayFindFirst(distinct: allFields) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findFirstWithRelations: calendarDayFindFirst {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendarDay_findMany: calendarDays {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManySkip: calendarDays(skip: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyTake: calendarDays(take: 1) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWhere: calendarDays(where: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWhereOpen: calendarDays(
+    whereOpen: {labelShort: {contains: "t"}}
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyOrderBy: calendarDays(orderBy: {labelShort: desc}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyOrderByOpen: calendarDays(
+    orderByOpen: [{date: "desc"}, {labelShort: "desc"}]
+  ) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyCursor: calendarDays(cursor: {date: "2023-12-24"}) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyDistinct: calendarDays(distinct: allFields) {
+    date
+    labelShort
+    labelLong
+    dayName
+  }
+  calendarDay_findManyWithRelations: calendarDays {
+    date
+    labelShort
+    labelLong
+    dayName
+    calendars {
+      code
+      labelShort
+      labelLong
+    }
+    calendarDayEnumVals {
+      fieldnameHelper
+    }
+  }
+  calendar_findUniqueByCode: calendar(code: "CALEND_NORM") {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findUniqueByLabelShort: calendar(labelShort: "Calendrier normal") {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findUniqueByLabelLong: calendar(labelLong: "Calendrier normal") {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findUnique: calendar(id: "00000000-0000-0000-0000-000000000130") {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findUniqueWithRelations: calendar(code: "CALEND_NORM") {
+    code
+    labelShort
+    labelLong
+    calendarDays {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  calendar_findFirst: calendarFindFirst {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstSkip: calendarFindFirst(skip: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstTake: calendarFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstWhere: calendarFindFirst(
+    where: {labelShort: "Calendrier normal"}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstOrderBy: calendarFindFirst(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstCursor: calendarFindFirst(cursor: {code: "CALEND_NORM"}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstDistinct: calendarFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstWhereOpen: calendarFindFirst(
+    whereOpen: {labelShort: {contains: "a"}}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstOrderByOpen: calendarFindFirst(
+    orderByOpen: [{code: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findFirstWithRelations: calendarFindFirst {
+    code
+    labelShort
+    labelLong
+    calendarDays {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  calendar_findMany: calendars {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManySkip: calendars(skip: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyTake: calendars(take: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyWhere: calendars(where: {labelShort: "Calendrier normal"}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyOrderBy: calendars(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyCursor: calendars(cursor: {code: "CALEND_NORM"}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyDistinct: calendars(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyWhereOpen: calendars(whereOpen: {labelShort: {contains: "a"}}) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyOrderByOpen: calendars(
+    orderByOpen: [{code: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  calendar_findManyWithRelations: calendars(take: 10) {
+    code
+    labelShort
+    labelLong
+    calendarDays {
+      date
+      labelShort
+      labelLong
+      dayName
+    }
+  }
+  clocking_findUnique: clocking(id: "00000000-0000-0000-cccc-100000000000") {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findUniqueWithRelations: clocking(
+    id: "00000000-0000-0000-cccc-100000000000"
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    badge {
+      badgeNumber
+    }
+  }
+  clocking_findFirst: clockingFindFirst {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstSkip: clockingFindFirst(skip: 1) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstTake: clockingFindFirst(take: 1) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstWhere: clockingFindFirst(where: {timeRealOrigin: "Manual"}) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstOrderBy: clockingFindFirst(orderBy: {date: desc}) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstCursor: clockingFindFirst(
+    cursor: {id: "00000000-0000-0000-cccc-100000000000"}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstDistinct: clockingFindFirst(distinct: allFields) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstWhereOpen: clockingFindFirst(
+    whereOpen: {badgeNumberAtDateTime: {contains: "1"}}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstOrderByOpen: clockingFindFirst(
+    orderByOpen: [{timeReal: "desc"}, {date: "desc"}]
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findFirstWithRelations: clockingFindFirst {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    badge {
+      badgeNumber
+    }
+  }
+  clocking_findMany: clockings {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManySkip: clockings(skip: 1) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyTake: clockings(take: 1) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyWhere: clockings(where: {timeRealOrigin: "Manual"}) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyOrderBy: clockings(orderBy: {date: desc}) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyCursor: clockings(
+    cursor: {id: "00000000-0000-0000-cccc-100000000000"}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyDistinct: clockings(distinct: allFields) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyWhereOpen: clockings(
+    whereOpen: {badgeNumberAtDateTime: {contains: "1"}}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyOrderByOpen: clockings(
+    orderByOpen: [{timeReal: "desc"}, {date: "desc"}]
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+  }
+  clocking_findManyWithRelations: clockings {
+    date
+    timeReal
+    timeRealOrigin
+    timeValidated
+    timeValidatedOrigin
+    validationCreatedAt
+    validationCreatedBy
+    validationUpdatedAt
+    validationUpdatedBy
+    badgeNumberAtDateTime
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    badge {
+      badgeNumber
+    }
+  }
+  clocking_clockingsByResourceMatriculeByDay: clockingsByResourceByDay(
+    resource: {matricule: "123456A"}
+    date: "2024-05-01"
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    badgeNumberAtDateTime
+  }
+  clocking_clockingsByResourceLastnameByDay: clockingsByResourceByDay(
+    resource: {lastName: "Courtois"}
+    date: "2024-05-02"
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    badgeNumberAtDateTime
+  }
+  clocking_clockingsByResourceByPeriodOneYear: clockingsByResourceByPeriod(
+    resource: {matricule: "123456A"}
+    period: {dateStart: "2024-05-01", dateEnd: "2025-06-01"}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    badgeNumberAtDateTime
+  }
+  clocking_clockingsByResourceByPeriodOneMonth: clockingsByResourceByPeriod(
+    resource: {lastName: "Chevasson"}
+    period: {dateStart: "2024-05-01", dateEnd: "2024-06-01"}
+  ) {
+    date
+    timeReal
+    timeRealOrigin
+    badgeNumberAtDateTime
+  }
+  clocking_clockingsCountGroupByResourceByDayByMatricule: clockingsCountGroupByResourceByDay(
+    resource: {matricule: "123456A"}
+    date: "2024-05-01"
+  ) {
+    count
+    isOdd
+    firstName
+    lastName
+    resourceId
+  }
+  clocking_clockingsCountGroupByResourceByDayByLastname: clockingsCountGroupByResourceByDay(
+    resource: {lastName: "Courtois"}
+    date: "2024-05-02"
+  ) {
+    count
+    isOdd
+    firstName
+    lastName
+    resourceId
+  }
+  clocking_clockingsCountGroupByResourceByDayByLastnameAndHomonyms: clockingsCountGroupByResourceByDay(
+    resource: {lastName: "Chevasson"}
+    date: "2024-05-01"
+  ) {
+    count
+    isOdd
+    firstName
+    lastName
+    resourceId
+  }
+  clocking_clockingsCountGroupByResourceByPeriodByMatricule: clockingsCountGroupByResourceByPeriod(
+    resource: {matricule: "123456A"}
+    period: {dateStart: "2024-05-01", dateEnd: "2025-06-01"}
+  ) {
+    date
+    count
+    isOdd
+    firstName
+    lastName
+    resourceId
+  }
+  clocking_clockingsCountGroupByResourceByPeriodByLastName: clockingsCountGroupByResourceByPeriod(
+    resource: {lastName: "Chevasson"}
+    period: {dateStart: "2024-05-01", dateEnd: "2025-05-01"}
+  ) {
+    date
+    count
+    isOdd
+    firstName
+    lastName
+    resourceId
+  }
+  clocking_clockingsErrorsOnPeriodByResourceByDayByMatricule: clockingsErrorsOnPeriodByResourceByDay(
+    resource: {matricule: "123456A"}
+    period: {dateStart: "2024-05-01", dateEnd: "2025-06-01"}
+  ) {
+    error
+    date
+    lastName
+    firstName
+  }
+  clocking_clockingsErrorsOnPeriodByResourceByDayByLastname: clockingsErrorsOnPeriodByResourceByDay(
+    resource: {lastName: "Chevasson"}
+    period: {dateStart: "2024-05-01", dateEnd: "2025-05-01"}
+  ) {
+    error
+    date
+    lastName
+    firstName
+  }
+  config_findUniqueByCode: config(code: "clockingMaxValue") {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findUnique: config(id: "00000000-0000-0000-000c-000000000001") {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findUniqueWithRelations: config(
+    code: "clockingMaxValue"
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirst: configFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstTake: configFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstWhere: configFindFirst(
+    where: {code: "clockingMaxValue"}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstOrderBy: configFindFirst(orderBy: {code: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstCursor: configFindFirst(
+    cursor: {id: "00000000-0000-0000-000c-000000000001"}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstDistinct: configFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstWhereOpen: configFindFirst(whereOpen: {code: {contains: "c"}}) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstOrderByOpen: configFindFirst(
+    orderByOpen: [{type: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findFirstWithRelations: configFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findMany: configs {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyTake: configs(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyWhere: configs(
+    where: {code: "clockingMaxValue"}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyOrderBy: configs(orderBy: {code: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyCursor: configs(
+    cursor: {id: "00000000-0000-0000-000c-000000000001"}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyDistinct: configs(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyWhereOpen: configs(whereOpen: {code: {contains: "c"}}) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyOrderByOpen: configs(
+    orderByOpen: [{type: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  config_findManyWithRelations: configs {
+    code
+    labelShort
+    labelLong
+    type
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  customFieldsConstraint_findUniqueByName: customFieldsConstraint(
+    name: "Contrainte par defaut > isHistorised"
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findUniqueById: customFieldsConstraint(
+    id: "00000000-0000-0000-dcfc-000000000001"
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findUniqueWithRelations: customFieldsConstraint(
+    name: "Contrainte par defaut > isHistorised"
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+
+    resourceFields {
+      name
+      type
+      isCustom
+      visibleTo
+    }
+  }
+  customFieldsConstraint_findFirst: customFieldsConstraintFindFirst {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstSkip: customFieldsConstraintFindFirst(skip: 1) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstTake: customFieldsConstraintFindFirst(take: 1) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstOrderBy: customFieldsConstraintFindFirst(
+    orderBy: {name: desc}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstCursor: customFieldsConstraintFindFirst(
+    cursor: {id: "00000000-0000-0000-dcfc-000000000001"}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstDistinct: customFieldsConstraintFindFirst(
+    distinct: allFields
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstWhereOpen: customFieldsConstraintFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstOrderByOpen: customFieldsConstraintFindFirst(
+    orderByOpen: [{fieldType: "desc"}, {name: "desc"}]
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findFirstWithRelations: customFieldsConstraintFindFirst {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+
+    resourceFields {
+      name
+      type
+      isCustom
+      visibleTo
+    }
+  }
+  customFieldsConstraint_findMany: customFieldsConstraints {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManySkip: customFieldsConstraints(skip: 1) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyTake: customFieldsConstraints(take: 1) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyWhere: customFieldsConstraints(
+    where: {name: "Contrainte par defaut > isHistorised"}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyOrderBy: customFieldsConstraints(
+    orderBy: {name: desc}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyCursor: customFieldsConstraints(
+    cursor: {id: "00000000-0000-0000-dcfc-000000000001"}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyDistinct: customFieldsConstraints(
+    distinct: allFields
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyWhereOpen: customFieldsConstraints(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyOrderByOpen: customFieldsConstraints(
+    orderByOpen: [{fieldType: "desc"}, {name: "desc"}]
+  ) {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+  }
+  customFieldsConstraint_findManyWithRelations: customFieldsConstraints {
+    name
+    fieldType
+    isRequired
+    isHistorised
+    isUnique
+    number_valueMin
+    number_valueMax
+    string_lengthMin
+    string_lengthMax
+    string_isEmail
+    string_isPhoneNumber
+    dateMin
+    dateMax
+    dateTimeMin
+    dateTimeMax
+    timeMin
+    timeMax
+    defaultValueBoolean
+    defaultValueDate
+    defaultValueDateTime
+    defaultValueEnum
+    defaultValueFloat
+    defaultValueInt
+    defaultValueString
+    defaultValueTime
+
+    resourceFields {
+      name
+      type
+      isCustom
+      visibleTo
+    }
+  }
+  cycleNbrVal_findUnique: cycleNbrVal(id: "00000000-0000-0000-00c1-000000000001") {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findUniqueWithRelations: cycleNbrVal(
+    id: "00000000-0000-0000-00c1-000000000001"
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    cycleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  cycleNbrVal_findFirst: cycleNbrValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstSkip: cycleNbrValFindFirst(skip: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstTake: cycleNbrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstWhere: cycleNbrValFindFirst(
+    where: {id: "00000000-0000-0000-00c1-000000000001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstWhereOpen: cycleNbrValFindFirst(
+    orderBy: {fieldnameHelper: asc}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstOrderBy: cycleNbrValFindFirst(
+    cursor: {id: "00000000-0000-0000-00c1-000000000001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstOrderByOpen: cycleNbrValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstCursor: cycleNbrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "x"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstDistinct: cycleNbrValFindFirst(
+    orderByOpen: [{fieldnameHelper: "asc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findFirstWithRelations: cycleNbrValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    cycleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  cycleNbrVal_findMany: cycleNbrVals {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManySkip: cycleNbrVals(skip: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyTake: cycleNbrVals(take: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyWhere: cycleNbrVals(
+    where: {id: "5dacd48d-ff6f-4c0c-a78e-66cc28d1835e"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyWhereOpen: cycleNbrVals(orderBy: {fieldnameHelper: desc}) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyOrderBy: cycleNbrVals(
+    cursor: {id: "5dacd48d-ff6f-4c0c-a78e-66cc28d1835e"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyOrderByOpen: cycleNbrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyCursor: cycleNbrVals(
+    whereOpen: {fieldnameHelper: {contains: "x"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyDistinct: cycleNbrVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  cycleNbrVal_findManyWithRelations: cycleNbrVals(take: 10) {
+    fieldnameHelper
+    value
+    effectDate
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    cycleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  cycleOnResource_findUnique: cycleOnResource(
+    id: "00000000-0000-0000-00c4-000000000001"
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findUniqueWithRelations: cycleOnResource(
+    id: "00000000-0000-0000-00c4-000000000001"
+  ) {
+    effectDate
+    startRank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  cycleOnResource_findFirst: cycleOnResourceFindFirst {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstSkip: cycleOnResourceFindFirst(skip: 1) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstTake: cycleOnResourceFindFirst(take: 1) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstWhere: cycleOnResourceFindFirst(
+    where: {effectDate: "2024-04-01"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstOrderBy: cycleOnResourceFindFirst(
+    orderBy: {effectDate: desc}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstCursor: cycleOnResourceFindFirst(
+    cursor: {id: "00000000-0000-0000-00c4-000000000001"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstDistinct: cycleOnResourceFindFirst(distinct: allFields) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstWhereOpen: cycleOnResourceFindFirst(
+    whereOpen: {id: "00000000-0000-0000-00c4-000000000001"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstOrderByOpen: cycleOnResourceFindFirst(
+    orderByOpen: [{effectDate: "desc"}, {id: "desc"}]
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findFirstWithRelations: cycleOnResourceFindFirst {
+    effectDate
+    startRank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  cycleOnResource_findMany: cycleOnResources {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManySkip: cycleOnResources(skip: 1) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyTake: cycleOnResources(take: 1) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyWhere: cycleOnResources(
+    where: {effectDate: "2024-04-01"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyOrderBy: cycleOnResources(orderBy: {effectDate: desc}) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyCursor: cycleOnResources(
+    cursor: {id: "00000000-0000-0000-00c4-000000000001"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyDistinct: cycleOnResources(distinct: allFields) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyWhereOpen: cycleOnResources(
+    whereOpen: {id: "00000000-0000-0000-00c4-000000000001"}
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyOrderByOpen: cycleOnResources(
+    orderByOpen: [{effectDate: "desc"}, {id: "desc"}]
+  ) {
+    effectDate
+    startRank
+  }
+  cycleOnResource_findManyWithRelations: cycleOnResources(take: 10) {
+    effectDate
+    startRank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  cycleOnSchedule_findUnique: cycleOnSchedule(
+    id: "00000000-0000-0000-00c2-000000000001"
+  ) {
+    rank
+  }
+  cycleOnSchedule_findUniqueWithRelations: cycleOnSchedule(
+    id: "00000000-0000-0000-00c2-000000000001"
+  ) {
+    rank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+  }
+  cycleOnSchedule_findFirst: cycleOnScheduleFindFirst {
+    rank
+  }
+  cycleOnSchedule_findFirstSkip: cycleOnScheduleFindFirst(skip: 1) {
+    rank
+  }
+  cycleOnSchedule_findFirstTake: cycleOnScheduleFindFirst(take: 1) {
+    rank
+  }
+  cycleOnSchedule_findFirstWhere: cycleOnScheduleFindFirst(where: {rank: 1}) {
+    rank
+  }
+  cycleOnSchedule_findFirstOrderBy: cycleOnScheduleFindFirst(
+    orderBy: {rank: desc}
+  ) {
+    rank
+  }
+  cycleOnSchedule_findFirstCursor: cycleOnScheduleFindFirst(
+    cursor: {id: "00000000-0000-0000-00c2-000000000001"}
+  ) {
+    rank
+  }
+  cycleOnSchedule_findFirstDistinct: cycleOnScheduleFindFirst(distinct: allFields) {
+    rank
+  }
+  cycleOnSchedule_findFirstWhereOpen: cycleOnScheduleFindFirst(
+    whereOpen: {id: "00000000-0000-0000-00c2-000000000001"}
+  ) {
+    rank
+  }
+  cycleOnSchedule_findFirstOrderByOpen: cycleOnScheduleFindFirst(
+    orderByOpen: [{rank: "desc"}, {id: "desc"}]
+  ) {
+    rank
+  }
+  cycleOnSchedule_findFirstWithRelations: cycleOnScheduleFindFirst {
+    rank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+  }
+  cycleOnSchedule_findMany: cycleOnSchedules {
+    rank
+  }
+  cycleOnSchedule_findManySkip: cycleOnSchedules(skip: 1) {
+    rank
+  }
+  cycleOnSchedule_findManyTake: cycleOnSchedules(take: 1) {
+    rank
+  }
+  cycleOnSchedule_findManyWhere: cycleOnSchedules(where: {rank: 1}) {
+    rank
+  }
+  cycleOnSchedule_findManyOrderBy: cycleOnSchedules(orderBy: {rank: desc}) {
+    rank
+  }
+  cycleOnSchedule_findManyCursor: cycleOnSchedules(
+    cursor: {id: "00000000-0000-0000-00c2-000000000001"}
+  ) {
+    rank
+  }
+  cycleOnSchedule_findManyDistinct: cycleOnSchedules(distinct: allFields) {
+    rank
+  }
+  cycleOnSchedule_findManyWhereOpen: cycleOnSchedules(
+    whereOpen: {id: "00000000-0000-0000-00c2-000000000001"}
+  ) {
+    rank
+  }
+  cycleOnSchedule_findManyOrderByOpen: cycleOnSchedules(
+    orderByOpen: [{rank: "desc"}, {id: "desc"}]
+  ) {
+    rank
+  }
+  cycleOnSchedule_findManyWithRelations: cycleOnSchedules(take: 10) {
+    rank
+    cycle {
+      code
+      labelShort
+      labelLong
+      type
+      userGroup
+    }
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+  }
+  cycleReference_findUniqueByCode: cycleReference(code: "PRESENCE_MAX") {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findUnique: cycleReference(
+    id: "00000000-0000-0000-00c5-000000000001"
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findUniqueWithRelations: cycleReference(code: "PRESENCE_MAX") {
+    code
+    fieldname
+    type
+    constraints
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  cycleReference_findFirst: cycleReferenceFindFirst {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstSkip: cycleReferenceFindFirst(skip: 1) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstTake: cycleReferenceFindFirst(take: 1) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstWhere: cycleReferenceFindFirst(
+    where: {code: "PRESENCE_MAX"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstOrderBy: cycleReferenceFindFirst(
+    orderBy: {fieldname: desc}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstCursor: cycleReferenceFindFirst(
+    cursor: {code: "PRESENCE_MAX"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstDistinct: cycleReferenceFindFirst(distinct: allFields) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstWhereOpen: cycleReferenceFindFirst(
+    whereOpen: {fieldname: {contains: "e"}}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstOrderByOpen: cycleReferenceFindFirst(
+    orderByOpen: [{type: "desc"}, {fieldname: "desc"}]
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findFirstWithRelations: cycleReferenceFindFirst {
+    code
+    fieldname
+    type
+    constraints
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  cycleReference_findMany: cycleReferences {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManySkip: cycleReferences(skip: 2) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyTake: cycleReferences(take: 2) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyWhere: cycleReferences(where: {code: "PRESENCE_MAX"}) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyOrderBy: cycleReferences(orderBy: {fieldname: desc}) {
+    fieldname
+    code
+    type
+    constraints
+  }
+  cycleReference_findManyCursor: cycleReferences(cursor: {code: "CODE_REPAS_MAX"}) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyDistinct: cycleReferences(distinct: allFields) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyWhereOpen: cycleReferences(
+    whereOpen: {fieldname: {contains: "x"}}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyOrderByOpen: cycleReferences(
+    orderByOpen: [{type: "desc"}, {fieldname: "desc"}]
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  cycleReference_findManyWithRelations: cycleReferences(take: 10) {
+    code
+    fieldname
+    type
+    constraints
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  cycle_findUniqueBycode: cycle(code: "CYCLE_2X8") {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findUniqueBylabelShort: cycle(labelShort: "Cycle 2x8") {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findUniqueBylabelLong: cycle(labelLong: "Cycle 2 fois 8") {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findUnique: cycle(id: "00000000-0000-0000-000c-000000000001") {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findUniqueWithRelations: cycle(code: "CYCLE_2X8") {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleEnumVals {
+      fieldnameHelper
+    }
+    cycleOnResources {
+      effectDate
+    }
+    cycleOnSchedules {
+      rank
+    }
+  }
+  cycle_findFirst: cycleFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstSkip: cycleFindFirst(skip: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstTake: cycleFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstWhere: cycleFindFirst(where: {labelShort: "Cycle journée"}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstWhereOpen: cycleFindFirst(
+    whereOpen: {userGroup: {contains: "Paris"}}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstOrderBy: cycleFindFirst(orderBy: {code: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstOrderByOpen: cycleFindFirst(
+    orderByOpen: [{labelShort: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstCursor: cycleFindFirst(cursor: {code: "CYCLE_2X8"}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstDistinct: cycleFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findFirstWithRelations: cycleFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleEnumVals {
+      fieldnameHelper
+    }
+    cycleOnResources {
+      effectDate
+    }
+    cycleOnSchedules {
+      rank
+    }
+  }
+  cycle_findMany: cycles {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManySkip: cycles(skip: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyTake: cycles(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyWhere: cycles(where: {labelShort: "Cycle journée"}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyWhereOpen: cycles(whereOpen: {userGroup: {contains: "Paris"}}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyOrderBy: cycles(orderBy: {code: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyOrderByOpen: cycles(
+    orderByOpen: [{labelShort: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyCursor: cycles(cursor: {code: "CYCLE_2X8"}) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyDistinct: cycles(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+  }
+  cycle_findManyWithRelations: cycles {
+    code
+    labelShort
+    labelLong
+    type
+    userGroup
+    cycleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    cycleEnumVals {
+      fieldnameHelper
+    }
+    cycleOnResources {
+      effectDate
+    }
+    cycleOnSchedules {
+      rank
+    }
+  }
+  eventByDay_findUnique: eventByDay(id: "00000000-0000-0000-0ebd-000000000001") {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findUniqueWithRelations: eventByDay(
+    id: "00000000-0000-0000-0ebd-000000000001"
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventByDay_findFirst: eventByDayFindFirst {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstSkip: eventByDayFindFirst(skip: 1) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstTake: eventByDayFindFirst(take: 1) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstWhere: eventByDayFindFirst(where: {date: "2024-05-05"}) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstWhereOpen: eventByDayFindFirst(
+    whereOpen: {duration: {equals: 60}}
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstOrderBy: eventByDayFindFirst(orderBy: {date: desc}) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstOrderByOpen: eventByDayFindFirst(
+    orderByOpen: [{timeStart: "desc"}, {date: "desc"}]
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstCursor: eventByDayFindFirst(
+    cursor: {id: "00000000-0000-0000-0ebd-000000000001"}
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstDistinct: eventByDayFindFirst(distinct: allFields) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findFirstWithRelations: eventByDayFindFirst {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventByDay_findMany: eventByDays {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManySkip: eventByDays(skip: 1) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyTake: eventByDays(take: 1) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyWhere: eventByDays(where: {date: "2024-05-05"}) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyWhereOpen: eventByDays(whereOpen: {duration: {equals: 60}}) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyOrderBy: eventByDays(orderBy: {date: desc}) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyOrderByOpen: eventByDays(
+    orderByOpen: [{timeStart: "desc"}, {date: "desc"}]
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyCursor: eventByDays(
+    cursor: {id: "00000000-0000-0000-0ebd-000000000001"}
+  ) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyDistinct: eventByDays(distinct: allFields) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+  }
+  eventByDay_findManyWithRelations: eventByDays(take: 10) {
+    date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventGroupOnResource_findUnique: eventGroupOnResource(
+    id: "00000000-0000-0000-e905-000000000001"
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findUniqueWithRelations: eventGroupOnResource(
+    id: "00000000-0000-0000-e905-000000000001"
+  ) {
+    effectDate
+    eventGroup {
+      name
+    }
+    resources {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventGroupOnResource_findFirst: eventGroupOnResourceFindFirst {
+    effectDate
+  }
+  eventGroupOnResource_findFirstSkip: eventGroupOnResourceFindFirst(skip: 1) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstTake: eventGroupOnResourceFindFirst(take: 1) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstWhere: eventGroupOnResourceFindFirst(
+    where: {id: "00000000-0000-0000-e905-000000000001"}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstOrderBy: eventGroupOnResourceFindFirst(
+    orderBy: {effectDate: desc}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstCursor: eventGroupOnResourceFindFirst(
+    cursor: {id: "00000000-0000-0000-e905-000000000001"}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstDistinct: eventGroupOnResourceFindFirst(
+    distinct: allFields
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstWhereOpen: eventGroupOnResourceFindFirst(
+    whereOpen: {createdBy: {contains: "a"}}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstOrderByOpen: eventGroupOnResourceFindFirst(
+    orderByOpen: [{createdBy: "desc"}, {effectDate: "desc"}]
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findFirstWithRelations: eventGroupOnResourceFindFirst {
+    effectDate
+    eventGroup {
+      name
+    }
+    resources {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventGroupOnResource_findMany: eventGroupOnResources {
+    effectDate
+  }
+  eventGroupOnResource_findManySkip: eventGroupOnResources(skip: 1) {
+    effectDate
+  }
+  eventGroupOnResource_findManyTake: eventGroupOnResources(take: 1) {
+    effectDate
+  }
+  eventGroupOnResource_findManyWhere: eventGroupOnResources(
+    where: {id: "00000000-0000-0000-e905-000000000001"}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyOrderBy: eventGroupOnResources(
+    orderBy: {effectDate: desc}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyCursor: eventGroupOnResources(
+    cursor: {id: "00000000-0000-0000-e905-000000000001"}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyDistinct: eventGroupOnResources(
+    distinct: allFields
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyWhereOpen: eventGroupOnResources(
+    whereOpen: {createdBy: {contains: "a"}}
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyOrderByOpen: eventGroupOnResources(
+    orderByOpen: [{createdBy: "desc"}, {effectDate: "desc"}]
+  ) {
+    effectDate
+  }
+  eventGroupOnResource_findManyWithRelations: eventGroupOnResources {
+    effectDate
+    eventGroup {
+      name
+    }
+    resources {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  eventGroup_findUnique: eventGroup(name: "negatifs") {
+    name
+  }
+  eventGroup_findUniqueByName: eventGroup(
+    id: "00000000-0000-0000-00e9-000000000001"
+  ) {
+    name
+  }
+  eventGroup_findUniqueWithRelations: eventGroup(name: "negatifs") {
+    name
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+  }
+  eventGroup_findFirst: eventGroupFindFirst {
+    name
+  }
+  eventGroup_findFirstSkip: eventGroupFindFirst(skip: 1) {
+    name
+  }
+  eventGroup_findFirstTake: eventGroupFindFirst(take: 1) {
+    name
+  }
+  eventGroup_findFirstWhere: eventGroupFindFirst(where: {name: "negatifs"}) {
+    name
+  }
+  eventGroup_findFirstOrderBy: eventGroupFindFirst(orderBy: {name: desc}) {
+    name
+  }
+  eventGroup_findFirstCursor: eventGroupFindFirst(
+    cursor: {id: "00000000-0000-0000-00e9-000000000001"}
+  ) {
+    name
+  }
+  eventGroup_findFirstDistinct: eventGroupFindFirst(distinct: allFields) {
+    name
+  }
+  eventGroup_findFirstWhereOpen: eventGroupFindFirst(
+    whereOpen: {name: {contains: "a"}}
+  ) {
+    name
+  }
+  eventGroup_findFirstOrderByOpen: eventGroupFindFirst(
+    orderByOpen: [{createdAt: "desc"}, {name: "desc"}]
+  ) {
+    name
+  }
+  eventGroup_findFirstWithRelations: eventGroupFindFirst {
+    name
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+  }
+  eventGroup_findMany: eventGroups {
+    name
+  }
+  eventGroup_findManySkip: eventGroups(skip: 1) {
+    name
+  }
+  eventGroup_findManyTake: eventGroups(take: 1) {
+    name
+  }
+  eventGroup_findManyWhere: eventGroups(where: {name: "negatifs"}) {
+    name
+  }
+  eventGroup_findManyOrderBy: eventGroups(orderBy: {name: desc}) {
+    name
+  }
+  eventGroup_findManyCursor: eventGroups(
+    cursor: {id: "00000000-0000-0000-00e9-000000000001"}
+  ) {
+    name
+  }
+  eventGroup_findManyDistinct: eventGroups(distinct: allFields) {
+    name
+  }
+  eventGroup_findManyWhereOpen: eventGroups(whereOpen: {name: {contains: "a"}}) {
+    name
+  }
+  eventGroup_findManyOrderByOpen: eventGroups(
+    orderByOpen: [{createdAt: "desc"}, {name: "desc"}]
+  ) {
+    name
+  }
+  eventGroup_findManyWithRelations: eventGroups {
+    name
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+  }
+  eventRangeByDay_findUnique: eventRangeByDay(
+    id: "00000000-0000-0000-e5bd-000000000001"
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findUniqueWithRelations: eventRangeByDay(
+    id: "00000000-0000-0000-e5bd-000000000001"
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+    eventRangeOnResource {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+  }
+  eventRangeByDay_findFirst: eventRangeByDayFindFirst {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstSkip: eventRangeByDayFindFirst(skip: 1) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstTake: eventRangeByDayFindFirst(take: 1) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstWhere: eventRangeByDayFindFirst(
+    where: {date: "2024-04-01"}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstOrderBy: eventRangeByDayFindFirst(
+    orderBy: {date: desc}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstCursor: eventRangeByDayFindFirst(
+    cursor: {id: "00000000-0000-0000-e5bd-000000000001"}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstDistinct: eventRangeByDayFindFirst(distinct: allFields) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstWhereOpen: eventRangeByDayFindFirst(
+    whereOpen: {duration: {equals: 420}}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstOrderByOpen: eventRangeByDayFindFirst(
+    orderByOpen: [{duration: "desc"}, {date: "desc"}]
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findFirstWithRelations: eventRangeByDayFindFirst {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+    eventRangeOnResource {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+  }
+  eventRangeByDay_findMany: eventRangeByDays {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManySkip: eventRangeByDays(skip: 1) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyTake: eventRangeByDays(take: 1) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyWhere: eventRangeByDays(where: {date: "2024-04-01"}) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyOrderBy: eventRangeByDays(orderBy: {date: desc}) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyCursor: eventRangeByDays(
+    cursor: {id: "00000000-0000-0000-e5bd-000000000001"}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyDistinct: eventRangeByDays(distinct: allFields) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyWhereOpen: eventRangeByDays(
+    whereOpen: {duration: {equals: 420}}
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyOrderByOpen: eventRangeByDays(
+    orderByOpen: [{duration: "desc"}, {date: "desc"}]
+  ) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+  }
+  eventRangeByDay_findManyWithRelations: eventRangeByDays(take: 10) {
+    date
+    quantity
+    duration
+    eventOrigin
+    type
+    isValid
+    eventRangeOnResource {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+  }
+  eventRangeOnResource_findUnique: eventRangeOnResource(
+    id: "00000000-0000-0000-e505-000000000001"
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findUniqueWithRelations: eventRangeOnResource(
+    id: "00000000-0000-0000-e505-000000000001"
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    eventRangeByDays {
+      date
+      quantity
+      duration
+    }
+  }
+  eventRangeOnResource_findFirst: eventRangeOnResourceFindFirst {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstSkip: eventRangeOnResourceFindFirst(skip: 1) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstTake: eventRangeOnResourceFindFirst(take: 1) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstWhere: eventRangeOnResourceFindFirst(
+    where: {typeStart: "Day"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstWhereOpen: eventRangeOnResourceFindFirst(
+    whereOpen: {typeStart: "Day"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstOrderBy: eventRangeOnResourceFindFirst(
+    orderBy: {dateStart: desc}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstOrderByOpen: eventRangeOnResourceFindFirst(
+    orderByOpen: [{dateEnd: "desc"}, {dateStart: "desc"}]
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstCursor: eventRangeOnResourceFindFirst(
+    cursor: {id: "00000000-0000-0000-e505-000000000001"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstDistinct: eventRangeOnResourceFindFirst(
+    distinct: allFields
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findFirstWithRelations: eventRangeOnResourceFindFirst {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    eventRangeByDays {
+      date
+      quantity
+      duration
+    }
+  }
+  eventRangeOnResource_findMany: eventRangeOnResources {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManySkip: eventRangeOnResources(skip: 1) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyTake: eventRangeOnResources(take: 1) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyWhere: eventRangeOnResources(
+    where: {typeStart: "Day"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyWhereOpen: eventRangeOnResources(
+    whereOpen: {typeStart: "Day"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyOrderBy: eventRangeOnResources(
+    orderBy: {dateStart: desc}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyOrderByOpen: eventRangeOnResources(
+    orderByOpen: [{dateEnd: "desc"}, {dateStart: "desc"}]
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyCursor: eventRangeOnResources(
+    cursor: {id: "00000000-0000-0000-e505-000000000001"}
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyDistinct: eventRangeOnResources(
+    distinct: allFields
+  ) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+  }
+  eventRangeOnResource_findManyWithRelations: eventRangeOnResources(take: 10) {
+    dateStart
+    typeStart
+    dateEnd
+    typeEnd
+    eventOrigin
+    event {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    eventRangeByDays {
+      date
+      quantity
+      duration
+    }
+  }
+  event_findUniqueByCode: event(code: "MAL") {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findUniqueByLabelShort: event(labelShort: "Maladie") {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findUniqueByLabelLong: event(labelLong: "Maladie") {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findUnique: event(id: "00000000-0000-0000-000e-000000000001") {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findUniqueWithRelations: event(code: "MAL") {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    ifAbsenceEvents {
+      hourStart
+      hourEnd
+    }
+    ifPresenceEvents {
+      hourStart
+      hourEnd
+    }
+    eventGroups {
+      name
+    }
+    eventsAggregations {
+      code
+      labelShort
+      labelLong
+    }
+  }
+  event_findFirst: eventFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstSkip: eventFindFirst(skip: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstTake: eventFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstWhere: eventFindFirst(where: {code: "MAL"}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstOrderBy: eventFindFirst(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstCursor: eventFindFirst(cursor: {code: "MAL"}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstDistinct: eventFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstWhereOpen: eventFindFirst(
+    whereOpen: {labelShort: {contains: "a"}}
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstOrderByOpen: eventFindFirst(
+    orderByOpen: [{type: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findFirstWithRelations: eventFindFirst {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    ifAbsenceEvents {
+      hourStart
+      hourEnd
+    }
+    ifPresenceEvents {
+      hourStart
+      hourEnd
+    }
+    eventGroups {
+      name
+    }
+    eventsAggregations {
+      code
+      labelShort
+      labelLong
+    }
+  }
+  event_findMany: events {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManySkip: events(skip: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyTake: events(take: 1) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyWhere: events(where: {code: "MAL"}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyOrderBy: events(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyCursor: events(cursor: {code: "MAL"}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyDistinct: events(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyWhereOpen: events(whereOpen: {labelShort: {contains: "a"}}) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyOrderByOpen: events(
+    orderByOpen: [{type: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+  }
+  event_findManyWithRelations: events(take: 10) {
+    code
+    labelShort
+    labelLong
+    type
+    isRevolving
+    isUserInput
+    isManagedByDay
+    isManagedByHalfDay
+    isManagedByDuration
+    isManagedByStardAndEndHours
+    evaluationType
+    counterCode
+    isRightsCalculationAssociated
+    rightsReference
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    ifAbsenceEvents {
+      hourStart
+      hourEnd
+    }
+    ifPresenceEvents {
+      hourStart
+      hourEnd
+    }
+    eventGroups {
+      name
+    }
+    eventsAggregations {
+      code
+      labelShort
+      labelLong
+    }
+  }
+  eventsAggregation_findUniqueByCode: eventsAggregation(code: "GROUPE_1") {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findUnique: eventsAggregation(code: "GROUPE_1") {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findUniqueWithRelations: eventsAggregation(code: "GROUPE_1") {
+    code
+    labelShort
+    labelLong
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  eventsAggregation_findFirst: eventsAggregationFindFirst {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstSkip: eventsAggregationFindFirst(skip: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstTake: eventsAggregationFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstWhere: eventsAggregationFindFirst(
+    where: {code: "GROUPE_1"}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstOrderBy: eventsAggregationFindFirst(
+    orderBy: {code: desc}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstCursor: eventsAggregationFindFirst(
+    cursor: {code: "GROUPE_1"}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstDistinct: eventsAggregationFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstWhereOpen: eventsAggregationFindFirst(
+    whereOpen: {labelLong: {contains: "a"}}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstOrderByOpen: eventsAggregationFindFirst(
+    orderByOpen: [{labelLong: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findFirstWithRelations: eventsAggregationFindFirst {
+    code
+    labelShort
+    labelLong
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  eventsAggregation_findMany: eventsAggregations {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManySkip: eventsAggregations(skip: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyTake: eventsAggregations(take: 1) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyWhere: eventsAggregations(where: {code: "GROUPE_1"}) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyOrderBy: eventsAggregations(orderBy: {code: desc}) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyCursor: eventsAggregations(cursor: {code: "GROUPE_1"}) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyDistinct: eventsAggregations(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyWhereOpen: eventsAggregations(
+    whereOpen: {labelLong: {contains: "a"}}
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyOrderByOpen: eventsAggregations(
+    orderByOpen: [{labelLong: "desc"}, {code: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+  }
+  eventsAggregation_findManyWithRelations: eventsAggregations {
+    code
+    labelShort
+    labelLong
+    events {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  popCritValue_findUnique: popCritValue(
+    id: "00000000-0000-0000-909c-700000000001"
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findUniqueWithRelations: popCritValue(
+    id: "00000000-0000-0000-909c-700000000001"
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+  popCritValue_findFirst: popCritValueFindFirst {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstSkip: popCritValueFindFirst(skip: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstTake: popCritValueFindFirst(take: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWhere: popCritValueFindFirst(
+    where: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstOrderBy: popCritValueFindFirst(orderBy: {id: desc}) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstCursor: popCritValueFindFirst(
+    cursor: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstDistinct: popCritValueFindFirst(distinct: allFields) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWhereOpen: popCritValueFindFirst(
+    whereOpen: {valueStr: {contains: "c"}}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstOrderByOpen: popCritValueFindFirst(
+    orderByOpen: [{valueStr: "desc"}, {id: "desc"}]
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findFirstWithRelations: popCritValueFindFirst {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+  popCritValue_findMany: popCritValues {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManySkip: popCritValues(skip: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyTake: popCritValues(take: 1) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWhere: popCritValues(
+    where: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyOrderBy: popCritValues(orderBy: {id: desc}) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyCursor: popCritValues(
+    cursor: {id: "00000000-0000-0000-909c-700000000001"}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyDistinct: popCritValues(distinct: allFields) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWhereOpen: popCritValues(
+    whereOpen: {valueStr: {contains: "c"}}
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyOrderByOpen: popCritValues(
+    orderByOpen: [{valueStr: "desc"}, {id: "desc"}]
+  ) {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+  }
+  popCritValue_findManyWithRelations: popCritValues {
+    valueBol
+    valueDat
+    valueNbr
+    valueStr
+    popCriteria {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+    }
+  }
+  popCriteria_findUnique: popCriteria(id: "00000000-0000-0000-909c-000000000001") {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findUniqueWithRelations: popCriteria(
+    id: "00000000-0000-0000-909c-000000000001"
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+  popCriteria_findFirst: popCriteriaFindFirst {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstSkip: popCriteriaFindFirst(skip: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstTake: popCriteriaFindFirst(take: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWhere: popCriteriaFindFirst(
+    where: {name: "Criteria_Boolean_isPointage_equals_true"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstOrderBy: popCriteriaFindFirst(orderBy: {name: desc}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstCursor: popCriteriaFindFirst(
+    cursor: {id: "00000000-0000-0000-909c-000000000001"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstDistinct: popCriteriaFindFirst(distinct: allFields) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWhereOpen: popCriteriaFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstOrderByOpen: popCriteriaFindFirst(
+    orderByOpen: [{table: "desc"}, {field: "desc"}]
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWithRelations: popCriteriaFindFirst {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+  popCriteria_findMany: popCriterias {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManySkip: popCriterias(skip: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyTake: popCriterias(take: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWhere: popCriterias(
+    where: {name: "Criteria_Boolean_isPointage_equals_true"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyOrderBy: popCriterias(orderBy: {name: desc}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyCursor: popCriterias(
+    cursor: {id: "00000000-0000-0000-909c-000000000001"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyDistinct: popCriterias(distinct: allFields) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWhereOpen: popCriterias(whereOpen: {name: {contains: "c"}}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyOrderByOpen: popCriterias(
+    orderByOpen: [{table: "desc"}, {field: "desc"}]
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWithRelations: popCriterias {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+  population_findUniqueByName: population(name: "4_criteres") {
+    name
+    operatorLogical
+  }
+  population_findUnique: population(id: "00000000-0000-0000-9090-000000000001") {
+    name
+    operatorLogical
+  }
+  population_findUniqueWithRelations: population(name: "4_criteres") {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+  population_findFirst: populationFindFirst {
+    name
+    operatorLogical
+  }
+  population_findFirstSkip: populationFindFirst(skip: 1) {
+    name
+    operatorLogical
+  }
+  population_findFirstTake: populationFindFirst(take: 1) {
+    name
+    operatorLogical
+  }
+  population_findFirstWhere: populationFindFirst(where: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findFirstOrderBy: populationFindFirst(orderBy: {name: desc}) {
+    name
+    operatorLogical
+  }
+  population_findFirstCursor: populationFindFirst(cursor: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findFirstDistinct: populationFindFirst(distinct: allFields) {
+    name
+    operatorLogical
+  }
+  population_findFirstWhereOpen: populationFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    operatorLogical
+  }
+  population_findFirstOrderByOpen: populationFindFirst(
+    orderByOpen: [{operatorLogical: "desc"}, {name: "desc"}]
+  ) {
+    name
+    operatorLogical
+  }
+  population_findFirstWithRelations: populationFindFirst {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+  population_findMany: populations {
+    name
+    operatorLogical
+  }
+  population_findManySkip: populations(skip: 1) {
+    name
+    operatorLogical
+  }
+  population_findManyTake: populations(take: 1) {
+    name
+    operatorLogical
+  }
+  population_findManyWhere: populations(where: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findManyOrderBy: populations(orderBy: {name: desc}) {
+    name
+    operatorLogical
+  }
+  population_findManyCursor: populations(cursor: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findManyDistinct: populations(distinct: allFields) {
+    name
+    operatorLogical
+  }
+  population_findManyWhereOpen: populations(whereOpen: {name: {contains: "c"}}) {
+    name
+    operatorLogical
+  }
+  population_findManyOrderByOpen: populations(
+    orderByOpen: [{operatorLogical: "desc"}, {name: "desc"}]
+  ) {
+    name
+    operatorLogical
+  }
+  population_findManyWithRelations: populations {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+  resourceBolVal_findUnique: resourceBolVal(
+    id: "00000000-0000-0000-0000-000000000061"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findUniqueWithRelations: resourceBolVal(
+    id: "00000000-0000-0000-0000-000000000061"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceBolVal_findFirst: resourceBolValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstSkip: resourceBolValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstTake: resourceBolValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstWhere: resourceBolValFindFirst(
+    where: {fieldnameHelper: "isPointage"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstOrderBy: resourceBolValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstCursor: resourceBolValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000061"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstDistinct: resourceBolValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstWhereOpen: resourceBolValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstOrderByOpen: resourceBolValFindFirst(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findFirstWithRelations: resourceBolValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceBolVal_findMany: resourceBolVals {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManySkip: resourceBolVals(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyTake: resourceBolVals(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyWhere: resourceBolVals(
+    where: {fieldnameHelper: "isPointage"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyOrderBy: resourceBolVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyCursor: resourceBolVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000061"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyDistinct: resourceBolVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyWhereOpen: resourceBolVals(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyOrderByOpen: resourceBolVals(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceBolVal_findManyWithRelations: resourceBolVals(take: 10) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceDatVal_findUnique: resourceDatVal(
+    id: "00000000-0000-0000-0000-000000000065"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findUniqueWithRelations: resourceDatVal(
+    id: "00000000-0000-0000-0000-000000000065"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceDatVal_findFirst: resourceDatValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstSkip: resourceDatValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstTake: resourceDatValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstWhere: resourceDatValFindFirst(
+    where: {fieldnameHelper: "inDate"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstOrderBy: resourceDatValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstCursor: resourceDatValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000065"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstDistinct: resourceDatValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstWhereOpen: resourceDatValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstOrderByOpen: resourceDatValFindFirst(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findFirstWithRelations: resourceDatValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceDatVal_findMany: resourceDatVals {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManySkip: resourceDatVals(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyTake: resourceDatVals(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyWhere: resourceDatVals(
+    where: {fieldnameHelper: "inDate"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyOrderBy: resourceDatVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyCursor: resourceDatVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000065"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyDistinct: resourceDatVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyWhereOpen: resourceDatVals(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyOrderByOpen: resourceDatVals(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceDatVal_findManyWithRelations: resourceDatVals(take: 10) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceEnumNbrVal_findUnique: resourceEnumNbrVal(
+    id: "00000000-0000-0000-0000-000000000001"
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findUniqueWithRelations: resourceEnumNbrVal(
+    id: "00000000-0000-0000-0000-000000000001"
+  ) {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumNbrVal_findFirst: resourceEnumNbrValFindFirst {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstSkip: resourceEnumNbrValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstTake: resourceEnumNbrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstWhere: resourceEnumNbrValFindFirst(
+    where: {fieldnameHelper: "echelon"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstOrderBy: resourceEnumNbrValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstCursor: resourceEnumNbrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000001"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstDistinct: resourceEnumNbrValFindFirst(
+    distinct: allFields
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstWhereOpen: resourceEnumNbrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstOrderByOpen: resourceEnumNbrValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findFirstWithRelations: resourceEnumNbrValFindFirst {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumNbrVal_findMany: resourceEnumNbrVals {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManySkip: resourceEnumNbrVals(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyTake: resourceEnumNbrVals(take: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyWhere: resourceEnumNbrVals(
+    where: {fieldnameHelper: "echelon"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyOrderBy: resourceEnumNbrVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyCursor: resourceEnumNbrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000001"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyDistinct: resourceEnumNbrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyWhereOpen: resourceEnumNbrVals(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyOrderByOpen: resourceEnumNbrVals(
+    orderByOpen: [{fieldnameHelper: "asc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumNbrVal_findManyWithRelations: resourceEnumNbrVals(take: 10) {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumStrVal_findUnique: resourceEnumStrVal(
+    id: "00000000-0000-0000-0000-000000000010"
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findUniqueWithRelations: resourceEnumStrVal(
+    id: "00000000-0000-0000-0000-000000000010"
+  ) {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumStrVal_findFirst: resourceEnumStrValFindFirst {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstSkip: resourceEnumStrValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstTake: resourceEnumStrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstWhere: resourceEnumStrValFindFirst(
+    where: {fieldnameHelper: "contract"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstOrderBy: resourceEnumStrValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstCursor: resourceEnumStrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000010"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstDistinct: resourceEnumStrValFindFirst(
+    distinct: allFields
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstWhereOpen: resourceEnumStrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstOrderByOpen: resourceEnumStrValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findFirstWithRelations: resourceEnumStrValFindFirst {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumStrVal_findMany: resourceEnumStrVals {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManySkip: resourceEnumStrVals(skip: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyTake: resourceEnumStrVals(take: 1) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyWhere: resourceEnumStrVals(
+    where: {fieldnameHelper: "contract"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyOrderBy: resourceEnumStrVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyCursor: resourceEnumStrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000010"}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyDistinct: resourceEnumStrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyWhereOpen: resourceEnumStrVals(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyOrderByOpen: resourceEnumStrVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+  }
+  resourceEnumStrVal_findManyWithRelations: resourceEnumStrVals(take: 10) {
+    fieldnameHelper
+    value
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+      fieldnameHelper
+    }
+  }
+  resourceEnumVal_findUnique: resourceEnumVal(
+    id: "00000000-0000-0000-0000-000000000074"
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findUniqueWithRelations: resourceEnumVal(
+    id: "00000000-0000-0000-0000-000000000074"
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumNbrVal {
+      value
+    }
+    resourceEnumStrVal {
+      value
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  resourceEnumVal_findFirst: resourceEnumValFindFirst {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstSkip: resourceEnumValFindFirst(skip: 1) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstTake: resourceEnumValFindFirst(take: 1) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstWhere: resourceEnumValFindFirst(
+    where: {fieldnameHelper: "contract"}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstOrderBy: resourceEnumValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstCursor: resourceEnumValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000074"}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstDistinct: resourceEnumValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstWhereOpen: resourceEnumValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "a"}}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstOrderByOpen: resourceEnumValFindFirst(
+    orderByOpen: [{matriculeHelper: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findFirstWithRelations: resourceEnumValFindFirst {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumNbrVal {
+      value
+    }
+    resourceEnumStrVal {
+      value
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  resourceEnumVal_findMany: resourceEnumVals {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManySkip: resourceEnumVals(skip: 1) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyTake: resourceEnumVals(take: 1) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyWhere: resourceEnumVals(
+    where: {fieldnameHelper: "contract"}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyOrderBy: resourceEnumVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyCursor: resourceEnumVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000074"}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyDistinct: resourceEnumVals(distinct: allFields) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyWhereOpen: resourceEnumVals(
+    whereOpen: {fieldnameHelper: {contains: "a"}}
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyOrderByOpen: resourceEnumVals(
+    orderByOpen: [{matriculeHelper: "desc"}, {fieldnameHelper: "desc"}]
+  ) {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+  }
+  resourceEnumVal_findManyWithRelations: resourceEnumVals {
+    fieldnameHelper
+    matriculeHelper
+    effectDate
+    resourceEnum {
+      name
+      type
+    }
+    resourceEnumNbrVal {
+      value
+    }
+    resourceEnumStrVal {
+      value
+    }
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+  }
+  resourceEnum_findUniqueByName: resourceEnum(name: "contract") {
+    name
+    type
+  }
+  resourceEnum_findUnique: resourceEnum(
+    id: "00000000-0000-0000-0000-000000000001"
+  ) {
+    name
+    type
+  }
+  resourceEnum_findUniqueWithRelations: resourceEnum(name: "contract") {
+    name
+    type
+    resourceEnumNbrVals {
+      value
+    }
+    resourceEnumStrVals {
+      value
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+    }
+    resourceFields {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceEnum_findFirst: resourceEnumFindFirst {
+    name
+    type
+  }
+  resourceEnum_findFirstSkip: resourceEnumFindFirst(skip: 1) {
+    name
+    type
+  }
+  resourceEnum_findFirstTake: resourceEnumFindFirst(take: 1) {
+    name
+    type
+  }
+  resourceEnum_findFirstWhere: resourceEnumFindFirst(where: {name: "contract"}) {
+    name
+    type
+  }
+  resourceEnum_findFirstOrderBy: resourceEnumFindFirst(orderBy: {name: desc}) {
+    name
+    type
+  }
+  resourceEnum_findFirstCursor: resourceEnumFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000001"}
+  ) {
+    name
+    type
+  }
+  resourceEnum_findFirstDistinct: resourceEnumFindFirst(distinct: allFields) {
+    name
+    type
+  }
+  resourceEnum_findFirstWhereOpen: resourceEnumFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    type
+  }
+  resourceEnum_findFirstOrderByOpen: resourceEnumFindFirst(
+    orderByOpen: [{type: "asc"}, {name: "asc"}]
+  ) {
+    name
+    type
+  }
+  resourceEnum_findFirstWithRelations: resourceEnumFindFirst {
+    name
+    type
+    resourceEnumNbrVals {
+      value
+    }
+    resourceEnumStrVals {
+      value
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+    }
+    resourceFields {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceEnum_findMany: resourceEnums {
+    name
+    type
+  }
+  resourceEnum_findManySkip: resourceEnums(skip: 1) {
+    name
+    type
+  }
+  resourceEnum_findManyTake: resourceEnums(take: 1) {
+    name
+    type
+  }
+  resourceEnum_findManyWhere: resourceEnums(where: {name: "contract"}) {
+    name
+    type
+  }
+  resourceEnum_findManyOrderBy: resourceEnums(orderBy: {name: desc}) {
+    name
+    type
+  }
+  resourceEnum_findManyCursor: resourceEnums(
+    cursor: {id: "00000000-0000-0000-0000-000000000001"}
+  ) {
+    name
+    type
+  }
+  resourceEnum_findManyDistinct: resourceEnums(distinct: allFields) {
+    name
+    type
+  }
+  resourceEnum_findManyWhereOpen: resourceEnums(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    type
+  }
+  resourceEnum_findManyOrderByOpen: resourceEnums(
+    orderByOpen: [{type: "asc"}, {name: "asc"}]
+  ) {
+    name
+    type
+  }
+  resourceEnum_findManyWithRelations: resourceEnums(take: 10) {
+    name
+    type
+    resourceEnumNbrVals {
+      value
+    }
+    resourceEnumStrVals {
+      value
+    }
+    resourceEnumVals {
+      matriculeHelper
+      effectDate
+    }
+    resourceFields {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceField_findUniqueByName: resourceField(name: "lastName") {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findUnique: resourceField(
+    id: "00000000-0000-0000-0000-000000000034"
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findUniqueWithRelations: resourceField(name: "lastName") {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+
+    customFieldsConstraint {
+      name
+      fieldType
+      isRequired
+      isHistorised
+      isUnique
+    }
+
+    resourceStrVals {
+      value
+    }
+  }
+  resourceField_findFirst: resourceFieldFindFirst {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstSkip: resourceFieldFindFirst(skip: 1) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstTake: resourceFieldFindFirst(take: 1) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstWhere: resourceFieldFindFirst(where: {name: "lastName"}) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstOrderBy: resourceFieldFindFirst(orderBy: {name: desc}) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstCursor: resourceFieldFindFirst(
+    cursor: {name: "lastName"}
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstDistinct: resourceFieldFindFirst(distinct: allFields) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstWhereOpen: resourceFieldFindFirst(
+    whereOpen: {name: {contains: "e"}}
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstOrderByOpen: resourceFieldFindFirst(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findFirstWithRelations: resourceFieldFindFirst {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+
+    customFieldsConstraint {
+      name
+      fieldType
+      isRequired
+      isHistorised
+      isUnique
+    }
+
+    resourceStrVals {
+      value
+    }
+    resourceBolVals {
+      value
+    }
+    resourceDatVals {
+      value
+    }
+    resourceNbrVals {
+      value
+    }
+    resourceEnum {
+      name
+      type
+      resourceEnumStrVals {
+        value
+      }
+    }
+  }
+  resourceField_findMany: resourceFields {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManySkip: resourceFields(skip: 1) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyTake: resourceFields(take: 1) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyWhere: resourceFields(where: {name: "lastName"}) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyOrderBy: resourceFields(orderBy: {name: desc}) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyCursor: resourceFields(cursor: {name: "firstName"}) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyDistinct: resourceFields(distinct: allFields) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyWhereOpen: resourceFields(
+    whereOpen: {name: {contains: "e"}}
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyOrderByOpen: resourceFields(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+  }
+  resourceField_findManyWithRelations: resourceFields(take: 10) {
+    name
+    type
+    constraints
+    defaultValue
+    isCustom
+    isHistorised
+    isRequired
+    isUnique
+    visibleTo
+
+    customFieldsConstraint {
+      name
+      fieldType
+      isRequired
+      isHistorised
+      isUnique
+    }
+
+    resourceStrVals {
+      value
+    }
+    resourceBolVals {
+      value
+    }
+    resourceDatVals {
+      value
+    }
+    resourceNbrVals {
+      value
+    }
+    resourceEnum {
+      name
+      type
+      resourceEnumStrVals {
+        value
+      }
+    }
+  }
+  resourceNbrVal_findUnique: resourceNbrVal(
+    id: "00000000-0000-0000-0000-000000000068"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findUniqueWithRelations: resourceNbrVal(
+    id: "00000000-0000-0000-0000-000000000068"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceNbrVal_findFirst: resourceNbrValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstSkip: resourceNbrValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstTake: resourceNbrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstWhere: resourceNbrValFindFirst(
+    where: {fieldnameHelper: "employmentRatePercent"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstOrderBy: resourceNbrValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstCursor: resourceNbrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000068"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstDistinct: resourceNbrValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstWhereOpen: resourceNbrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstOrderByOpen: resourceNbrValFindFirst(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findFirstWithRelations: resourceNbrValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceNbrVal_findMany: resourceNbrVals {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManySkip: resourceNbrVals(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyTake: resourceNbrVals(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyWhere: resourceNbrVals(
+    where: {fieldnameHelper: "employmentRatePercent"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyOrderBy: resourceNbrVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyCursor: resourceNbrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000068"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyDistinct: resourceNbrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyWhereOpen: resourceNbrVals(
+    whereOpen: {fieldnameHelper: {contains: "w"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyOrderByOpen: resourceNbrVals(
+    orderByOpen: [{value: "asc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceNbrVal_findManyWithRelations: resourceNbrVals(take: 10) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceStrVal_findUnique: resourceStrVal(
+    id: "00000000-0000-0000-0000-000000000070"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findUniqueWithRelations: resourceStrVal(
+    id: "00000000-0000-0000-0000-000000000070"
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceStrVal_findFirst: resourceStrValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstSkip: resourceStrValFindFirst(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstTake: resourceStrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstWhere: resourceStrValFindFirst(
+    where: {fieldnameHelper: "lastName"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstOrderBy: resourceStrValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstCursor: resourceStrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000070"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstDistinct: resourceStrValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstWhereOpen: resourceStrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstOrderByOpen: resourceStrValFindFirst(
+    orderByOpen: [{value: "desc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findFirstWithRelations: resourceStrValFindFirst {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resourceStrVal_findMany: resourceStrVals {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManySkip: resourceStrVals(skip: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyTake: resourceStrVals(take: 1) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyWhere: resourceStrVals(
+    where: {fieldnameHelper: "lastName"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyOrderBy: resourceStrVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyCursor: resourceStrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000070"}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyDistinct: resourceStrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyWhereOpen: resourceStrVals(
+    whereOpen: {fieldnameHelper: {contains: "first"}}
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyOrderByOpen: resourceStrVals(
+    orderByOpen: [{value: "desc"}, {fieldnameHelper: "asc"}]
+  ) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+  }
+  resourceStrVal_findManyWithRelations: resourceStrVals(take: 4) {
+    fieldnameHelper
+    value
+    matriculeHelper
+    effectDate
+    resource {
+      matricule
+      socialSecurityNumber
+    }
+    resourceField {
+      constraints
+      defaultValue
+      isHistorised
+      isRequired
+    }
+  }
+  resource_findUniqueByMatricule: resource(matricule: "123456A") {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findUniqueBySSN: resource(socialSecurityNumber: "5656565656565") {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findUnique: resource(id: "00000000-0000-0000-0000-000000000059") {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findUniqueWithRelations: resource(matricule: "123456A") {
+    matricule
+    socialSecurityNumber
+    resourceBolVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceDatVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceNbrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceStrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceEnumVals {
+      fieldnameHelper
+      resourceEnumNbrVal {
+        value
+      }
+      resourceEnumStrVal {
+        value
+      }
+      effectDate
+    }
+    cycleOnResources {
+      effectDate
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  resource_findFirst: resourceFindFirst {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstSkip: resourceFindFirst(skip: 1) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstTake: resourceFindFirst(take: 1) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstWhere: resourceFindFirst(where: {matricule: "123456A"}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstOrderBy: resourceFindFirst(orderBy: {matricule: desc}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstCursor: resourceFindFirst(cursor: {matricule: "123456A"}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstDistinct: resourceFindFirst(distinct: allFields) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstWhereOpen: resourceFindFirst(
+    whereOpen: {matricule: {contains: "345"}}
+  ) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstOrderByOpen: resourceFindFirst(
+    orderByOpen: [{socialSecurityNumber: "asc"}, {matricule: "asc"}]
+  ) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findFirstWithRelations: resourceFindFirst {
+    matricule
+    socialSecurityNumber
+    resourceBolVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceDatVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceNbrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceStrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceEnumVals {
+      fieldnameHelper
+      resourceEnumNbrVal {
+        value
+      }
+      resourceEnumStrVal {
+        value
+      }
+      effectDate
+    }
+    cycleOnResources {
+      effectDate
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  resource_findMany: resources {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManySkip: resources(skip: 1) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyTake: resources(take: 1) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyWhere: resources(where: {matricule: "123456A"}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyOrderBy: resources(orderBy: {matricule: desc}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyCursor: resources(cursor: {matricule: "123456A"}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyDistinct: resources(distinct: allFields) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyWhereOpen: resources(whereOpen: {matricule: {contains: "a"}}) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyOrderByOpen: resources(
+    orderByOpen: [{socialSecurityNumber: "asc"}, {matricule: "asc"}]
+  ) {
+    matricule
+    socialSecurityNumber
+  }
+  resource_findManyWithRelations: resources(take: 10) {
+    matricule
+    socialSecurityNumber
+    resourceBolVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceDatVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceNbrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceStrVals {
+      fieldnameHelper
+      value
+      effectDate
+    }
+    resourceEnumVals {
+      fieldnameHelper
+      effectDate
+      resourceEnumNbrVal {
+        value
+      }
+      resourceEnumStrVal {
+        value
+      }
+    }
+    cycleOnResources {
+      effectDate
+    }
+    eventRangeOnResources {
+      dateStart
+      typeStart
+      dateEnd
+      typeEnd
+    }
+    eventByDays {
+      date
+      timeStart
+      timeEnd
+      quantity
+      duration
+      eventOrigin
+      isAnomaly
+    }
+    eventGroupOnResources {
+      effectDate
+    }
+    badgeOnResources {
+      effectDateStart
+      effectDateEnd
+    }
+    clockings {
+      date
+      timeReal
+      timeRealOrigin
+      timeValidated
+      timeValidatedOrigin
+      badgeNumberAtDateTime
+    }
+  }
+  resourcesByName(name: "Chevasson") {
+    matricule
+    socialSecurityNumber
+  }
+  scheduleBolVal_findUnique: scheduleBolVal(
+    id: "00000000-0000-0000-0000-000000002001"
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findUniqueWithRelations: scheduleBolVal(
+    id: "00000000-0000-0000-0000-000000002001"
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleBolVal_findFirst: scheduleBolValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstTake: scheduleBolValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstWhere: scheduleBolValFindFirst(
+    where: {id: "00000000-0000-0000-0000-000000002001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstOrderBy: scheduleBolValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstCursor: scheduleBolValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000002001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstDistinct: scheduleBolValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstWhereOpen: scheduleBolValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "e"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstOrderByOpen: scheduleBolValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findFirstWithRelations: scheduleBolValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleBolVal_findMany: scheduleBolVals {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyTake: scheduleBolVals(take: 1) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyWhere: scheduleBolVals(
+    where: {id: "00000000-0000-0000-0000-000000002001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyOrderBy: scheduleBolVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyCursor: scheduleBolVals(
+    cursor: {id: "00000000-0000-0000-0000-000000002001"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyDistinct: scheduleBolVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyWhereOpen: scheduleBolVals(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyOrderByOpen: scheduleBolVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleBolVal_findManyWithRelations: scheduleBolVals(take: 10) {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleEnumStrVal_findUniqueByValue: scheduleEnumStrVal(value: "Jour") {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findUnique: scheduleEnumStrVal(
+    id: "00000000-0000-0000-0000-000000000077"
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findUniqueWithRelations: scheduleEnumStrVal(value: "Jour") {
+    value
+    fieldnameHelper
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleEnumStrVal_findFirst: scheduleEnumStrValFindFirst {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstSkip: scheduleEnumStrValFindFirst(skip: 1) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstTake: scheduleEnumStrValFindFirst(take: 1) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstWhere: scheduleEnumStrValFindFirst(
+    where: {fieldnameHelper: "scheduleType"}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstWhereOpen: scheduleEnumStrValFindFirst(
+    whereOpen: {value: {contains: "a"}}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstOrderBy: scheduleEnumStrValFindFirst(
+    orderBy: {value: desc}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstOrderByOpen: scheduleEnumStrValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstCursor: scheduleEnumStrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000077"}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstDistinct: scheduleEnumStrValFindFirst(
+    distinct: allFields
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findFirstWithRelations: scheduleEnumStrValFindFirst {
+    value
+    fieldnameHelper
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleEnumStrVal_findMany: scheduleEnumStrVals {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManySkip: scheduleEnumStrVals(skip: 1) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyTake: scheduleEnumStrVals(take: 1) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyWhere: scheduleEnumStrVals(where: {value: "Nuit"}) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyWhereOpen: scheduleEnumStrVals(
+    whereOpen: {value: {contains: "i"}}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyOrderBy: scheduleEnumStrVals(orderBy: {value: desc}) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyOrderByOpen: scheduleEnumStrVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyCursor: scheduleEnumStrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000077"}
+  ) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyDistinct: scheduleEnumStrVals(distinct: allFields) {
+    value
+    fieldnameHelper
+  }
+  scheduleEnumStrVal_findManyWithRelations: scheduleEnumStrVals {
+    value
+    fieldnameHelper
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleEnumVal_findUnique: scheduleEnumVal(
+    id: "00000000-0000-0000-0000-000000000100"
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findUniqueWithRelations: scheduleEnumVal(
+    id: "00000000-0000-0000-0000-000000000100"
+  ) {
+    fieldnameHelper
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumStrVal {
+      value
+      fieldnameHelper
+    }
+  }
+  scheduleEnumVal_findFirst: scheduleEnumValFindFirst {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstSkip: scheduleEnumValFindFirst(skip: 1) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstTake: scheduleEnumValFindFirst(take: 1) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstWhere: scheduleEnumValFindFirst(
+    where: {id: "00000000-0000-0000-0000-000000000100"}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstOrderBy: scheduleEnumValFindFirst(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstCursor: scheduleEnumValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000100"}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstDistinct: scheduleEnumValFindFirst(distinct: allFields) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstWhereOpen: scheduleEnumValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "c"}}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstOrderByOpen: scheduleEnumValFindFirst(
+    orderByOpen: [{fieldnameHelper: "desc"}, {fieldnameHelper: "desc"}]
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findFirstWithRelations: scheduleEnumValFindFirst {
+    fieldnameHelper
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumStrVal {
+      value
+      fieldnameHelper
+    }
+  }
+  scheduleEnumVal_findMany: scheduleEnumVals {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManySkip: scheduleEnumVals(skip: 1) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyTake: scheduleEnumVals(take: 1) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyWhere: scheduleEnumVals(
+    where: {id: "00000000-0000-0000-0000-000000000100"}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyOrderBy: scheduleEnumVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyCursor: scheduleEnumVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000100"}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyDistinct: scheduleEnumVals(distinct: allFields) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyWhereOpen: scheduleEnumVals(
+    whereOpen: {fieldnameHelper: {contains: "s"}}
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyOrderByOpen: scheduleEnumVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {fieldnameHelper: "desc"}]
+  ) {
+    fieldnameHelper
+  }
+  scheduleEnumVal_findManyWithRelations: scheduleEnumVals(take: 10) {
+    fieldnameHelper
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleEnum {
+      name
+      type
+    }
+    scheduleEnumStrVal {
+      value
+      fieldnameHelper
+    }
+  }
+  scheduleEnum_findUnique: scheduleEnum(name: "scheduleType") {
+    name
+    type
+  }
+  scheduleEnum_findUniqueWithRelations: scheduleEnum(name: "scheduleType") {
+    name
+    type
+    scheduleEnumStrVals {
+      value
+      fieldnameHelper
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleEnum_findFirst: scheduleEnumFindFirst {
+    name
+    type
+  }
+  scheduleEnum_findFirstTake: scheduleEnumFindFirst(take: 1) {
+    name
+    type
+  }
+  scheduleEnum_findFirstWhere: scheduleEnumFindFirst(
+    where: {name: "scheduleType"}
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findFirstOrderBy: scheduleEnumFindFirst(orderBy: {name: desc}) {
+    name
+    type
+  }
+  scheduleEnum_findFirstCursor: scheduleEnumFindFirst(
+    cursor: {name: "scheduleType"}
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findFirstDistinct: scheduleEnumFindFirst(distinct: allFields) {
+    name
+    type
+  }
+  scheduleEnum_findFirstWhereOpen: scheduleEnumFindFirst(
+    whereOpen: {name: {contains: "e"}}
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findFirstOrderByOpen: scheduleEnumFindFirst(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findFirstWithRelations: scheduleEnumFindFirst {
+    name
+    type
+    scheduleEnumStrVals {
+      value
+      fieldnameHelper
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleEnum_findMany: scheduleEnums {
+    name
+    type
+  }
+  scheduleEnum_findManyTake: scheduleEnums(take: 1) {
+    name
+    type
+  }
+  scheduleEnum_findManyWhere: scheduleEnums(where: {name: "scheduleType"}) {
+    name
+    type
+  }
+  scheduleEnum_findManyOrderBy: scheduleEnums(orderBy: {name: desc}) {
+    name
+    type
+  }
+  scheduleEnum_findManyCursor: scheduleEnums(cursor: {name: "scheduleType"}) {
+    name
+    type
+  }
+  scheduleEnum_findManyDistinct: scheduleEnums(distinct: allFields) {
+    name
+    type
+  }
+  scheduleEnum_findManyWhereOpen: scheduleEnums(
+    whereOpen: {name: {contains: "e"}}
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findManyOrderByOpen: scheduleEnums(
+    orderByOpen: [{type: "desc"}, {name: "desc"}]
+  ) {
+    name
+    type
+  }
+  scheduleEnum_findManyWithRelations: scheduleEnums(take: 10) {
+    name
+    type
+    scheduleEnumStrVals {
+      value
+      fieldnameHelper
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+    }
+  }
+  scheduleNbrVal_findUnique: scheduleNbrVal(
+    id: "00000000-0000-0000-0000-000000000104"
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findUniqueWithRelations: scheduleNbrVal(
+    id: "00000000-0000-0000-0000-000000000104"
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleNbrVal_findFirst: scheduleNbrValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstSkip: scheduleNbrValFindFirst(skip: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstTake: scheduleNbrValFindFirst(take: 1) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstWhere: scheduleNbrValFindFirst(
+    where: {id: "00000000-0000-0000-0000-000000000104"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstOrderBy: scheduleNbrValFindFirst(
+    orderBy: {fieldnameHelper: asc}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstCursor: scheduleNbrValFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000000104"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstDistinct: scheduleNbrValFindFirst(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstWhereOpen: scheduleNbrValFindFirst(
+    whereOpen: {fieldnameHelper: {contains: "x"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstOrderByOpen: scheduleNbrValFindFirst(
+    orderByOpen: [{fieldnameHelper: "asc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findFirstWithRelations: scheduleNbrValFindFirst {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleNbrVal_findMany: scheduleNbrVals {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManySkip: scheduleNbrVals(skip: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyTake: scheduleNbrVals(take: 2) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyWhere: scheduleNbrVals(
+    where: {id: "00000000-0000-0000-0000-000000000104"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyOrderBy: scheduleNbrVals(
+    orderBy: {fieldnameHelper: desc}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyCursor: scheduleNbrVals(
+    cursor: {id: "00000000-0000-0000-0000-000000000104"}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyDistinct: scheduleNbrVals(distinct: allFields) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyWhereOpen: scheduleNbrVals(
+    whereOpen: {fieldnameHelper: {contains: "x"}}
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyOrderByOpen: scheduleNbrVals(
+    orderByOpen: [{fieldnameHelper: "desc"}, {value: "desc"}]
+  ) {
+    fieldnameHelper
+    value
+    effectDate
+  }
+  scheduleNbrVal_findManyWithRelations: scheduleNbrVals(take: 10) {
+    fieldnameHelper
+    value
+    effectDate
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleReference {
+      code
+      fieldname
+      type
+      constraints
+    }
+  }
+  scheduleReference_findUniqueByCode: scheduleReference(code: "PRESENCE_MIN") {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findUnique: scheduleReference(
+    id: "00000000-0000-0000-0000-000000000088"
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findUniqueWithRelations: scheduleReference(
+    code: "PRESENCE_MIN"
+  ) {
+    code
+    fieldname
+    type
+    constraints
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  scheduleReference_findFirst: scheduleReferenceFindFirst {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstSkip: scheduleReferenceFindFirst(skip: 1) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstTake: scheduleReferenceFindFirst(take: 1) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstWhere: scheduleReferenceFindFirst(
+    where: {code: "PRESENCE_MIN"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstOrderBy: scheduleReferenceFindFirst(
+    orderBy: {fieldname: desc}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstCursor: scheduleReferenceFindFirst(
+    cursor: {code: "PRESENCE_MIN"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstDistinct: scheduleReferenceFindFirst(
+    distinct: allFields
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstWhereOpen: scheduleReferenceFindFirst(
+    whereOpen: {fieldname: {contains: "e"}}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstOrderByOpen: scheduleReferenceFindFirst(
+    orderByOpen: [{type: "desc"}, {fieldname: "desc"}]
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findFirstWithRelations: scheduleReferenceFindFirst {
+    code
+    fieldname
+    type
+    constraints
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  scheduleReference_findMany: scheduleReferences {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManySkip: scheduleReferences(skip: 2) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyTake: scheduleReferences(take: 2) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyWhere: scheduleReferences(
+    where: {code: "PRESENCE_MIN"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyOrderBy: scheduleReferences(
+    orderBy: {fieldname: desc}
+  ) {
+    fieldname
+    code
+    type
+    constraints
+  }
+  scheduleReference_findManyCursor: scheduleReferences(
+    cursor: {code: "CODE_REPAS_MAX"}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyDistinct: scheduleReferences(distinct: allFields) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyWhereOpen: scheduleReferences(
+    whereOpen: {fieldname: {contains: "x"}}
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyOrderByOpen: scheduleReferences(
+    orderByOpen: [{type: "desc"}, {fieldname: "desc"}]
+  ) {
+    code
+    fieldname
+    type
+    constraints
+  }
+  scheduleReference_findManyWithRelations: scheduleReferences(take: 10) {
+    code
+    fieldname
+    type
+    constraints
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+  }
+  scheduleShiftDetail_findUnique: scheduleShiftDetail(
+    id: "00000000-0000-0000-0000-000000003108"
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findUniqueWithRelations: scheduleShiftDetail(
+    id: "00000000-0000-0000-0000-000000003108"
+  ) {
+    hourStart
+    hourEnd
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleShiftType {
+      code
+      label
+    }
+    eventIfPresence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventIfAbsence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  scheduleShiftDetail_findFirst: scheduleShiftDetailsFindFirst {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstSkip: scheduleShiftDetailsFindFirst(skip: 1) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstTake: scheduleShiftDetailsFindFirst(take: 1) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstWhere: scheduleShiftDetailsFindFirst(
+    where: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstOrderBy: scheduleShiftDetailsFindFirst(
+    orderBy: {hourStart: desc}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstCursor: scheduleShiftDetailsFindFirst(
+    cursor: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstDistinct: scheduleShiftDetailsFindFirst(
+    distinct: allFields
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstWhereOpen: scheduleShiftDetailsFindFirst(
+    whereOpen: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstOrderByOpen: scheduleShiftDetailsFindFirst(
+    orderByOpen: [{hourEnd: "desc"}, {hourStart: "desc"}]
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findFirstWithRelations: scheduleShiftDetailsFindFirst {
+    hourStart
+    hourEnd
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleShiftType {
+      code
+      label
+    }
+    eventIfPresence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventIfAbsence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  scheduleShiftDetail_findMany: scheduleShiftDetails {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManySkip: scheduleShiftDetails(skip: 1) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyTake: scheduleShiftDetails(take: 1) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyWhere: scheduleShiftDetails(
+    where: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyOrderBy: scheduleShiftDetails(
+    orderBy: {hourStart: desc}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyCursor: scheduleShiftDetails(
+    cursor: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyDistinct: scheduleShiftDetails(distinct: allFields) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyWhereOpen: scheduleShiftDetails(
+    whereOpen: {id: "00000000-0000-0000-0000-000000003108"}
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyOrderByOpen: scheduleShiftDetails(
+    orderByOpen: [{hourEnd: "desc"}, {hourStart: "desc"}]
+  ) {
+    hourStart
+    hourEnd
+  }
+  scheduleShiftDetail_findManyWithRelations: scheduleShiftDetails(take: 10) {
+    hourStart
+    hourEnd
+    schedule {
+      code
+      labelShort
+      labelLong
+      dayStart
+      dayEnd
+      theoreticalClocking1
+      theoreticalClocking2
+      theoreticalClocking3
+      theoreticalClocking4
+      userGroup
+    }
+    scheduleShiftType {
+      code
+      label
+    }
+    eventIfPresence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+    eventIfAbsence {
+      code
+      labelShort
+      labelLong
+      type
+      isRevolving
+      isUserInput
+      isManagedByDay
+      isManagedByHalfDay
+      isManagedByDuration
+      isManagedByStardAndEndHours
+      evaluationType
+      counterCode
+      isRightsCalculationAssociated
+      rightsReference
+    }
+  }
+  scheduleShiftTypes_findUniqueByCode: scheduleShiftType(code: "PRES_INTER") {
+    code
+    label
+  }
+  scheduleShiftTypes_findUnique: scheduleShiftType(
+    id: "00000000-0000-0000-0000-000000000082"
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findUniqueWithRelations: scheduleShiftType(
+    code: "PRES_INTER"
+  ) {
+    code
+    label
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+      eventIfAbsence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+    }
+  }
+  scheduleShiftTypes_findFirst: scheduleShiftTypeFindFirst {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstSkip: scheduleShiftTypeFindFirst(skip: 1) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstTake: scheduleShiftTypeFindFirst(take: 1) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstWhere: scheduleShiftTypeFindFirst(
+    where: {code: "PRES_INTER"}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstOrderBy: scheduleShiftTypeFindFirst(
+    orderBy: {label: desc}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstCursor: scheduleShiftTypeFindFirst(
+    cursor: {code: "PRES_INTER"}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstDistinct: scheduleShiftTypeFindFirst(
+    distinct: allFields
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstWhereOpen: scheduleShiftTypeFindFirst(
+    whereOpen: {label: {contains: "i"}}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstOrderByOpen: scheduleShiftTypeFindFirst(
+    orderByOpen: [{code: "desc"}, {label: "desc"}]
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findFirstWithRelations: scheduleShiftTypeFindFirst {
+    code
+    label
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+      eventIfAbsence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+    }
+  }
+  scheduleShiftTypes_findMany: scheduleShiftTypes {
+    code
+    label
+  }
+  scheduleShiftTypes_findManySkip: scheduleShiftTypes(skip: 1) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyTake: scheduleShiftTypes(take: 1) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyWhere: scheduleShiftTypes(
+    where: {code: "PRES_INTER"}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyOrderBy: scheduleShiftTypes(orderBy: {label: desc}) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyCursor: scheduleShiftTypes(
+    cursor: {code: "PRES_INTER"}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyDistinct: scheduleShiftTypes(distinct: allFields) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyWhereOpen: scheduleShiftTypes(
+    whereOpen: {label: {contains: "i"}}
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyOrderByOpen: scheduleShiftTypes(
+    orderByOpen: [{code: "desc"}, {label: "desc"}]
+  ) {
+    code
+    label
+  }
+  scheduleShiftTypes_findManyWithRelations: scheduleShiftTypes(take: 10) {
+    code
+    label
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+      eventIfAbsence {
+        counterCode
+        isManagedByDay
+        isManagedByDuration
+        isManagedByHalfDay
+        isManagedByStardAndEndHours
+        rightsReference
+        updatedBy
+      }
+    }
+  }
+  schedule_findUniqueByCode: schedule(code: "FIX_PM_8H") {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findUniqueByLabelShort: schedule(labelShort: "FIXE PM 14H-22H") {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findUniqueByLabelLong: schedule(
+    labelLong: "Horaire fixe après-midi 8h"
+  ) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findUnique: schedule(id: "00000000-0000-0000-0000-000000001001") {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findUniqueWithRelations: schedule(code: "FIX_PM_8H") {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+      scheduleEnumStrVal {
+        value
+      }
+    }
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        code
+      }
+      eventIfAbsence {
+        code
+      }
+    }
+  }
+  schedule_findFirst: scheduleFindFirst {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstSkip: scheduleFindFirst(skip: 1) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstTake: scheduleFindFirst(take: 1) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstWhere: scheduleFindFirst(where: {code: "FIX_PM_8H"}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstOrderBy: scheduleFindFirst(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstCursor: scheduleFindFirst(cursor: {code: "FIX_PM_8H"}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstDistinct: scheduleFindFirst(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstWhereOpen: scheduleFindFirst(
+    whereOpen: {labelShort: {contains: "repos"}}
+  ) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstOrderByOpen: scheduleFindFirst(
+    orderByOpen: [{dayStart: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findFirstWithRelations: scheduleFindFirst {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+      scheduleEnumStrVal {
+        value
+      }
+    }
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        code
+      }
+      eventIfAbsence {
+        code
+      }
+    }
+  }
+  schedule_findMany: schedules {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManySkip: schedules(skip: 1) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyTake: schedules(take: 1) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyWhere: schedules(where: {code: "FIX_PM_8H"}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyOrderBy: schedules(orderBy: {labelShort: desc}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyCursor: schedules(cursor: {code: "FIX_PM_8H"}) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyDistinct: schedules(distinct: allFields) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyWhereOpen: schedules(
+    whereOpen: {labelShort: {contains: "repos"}}
+  ) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyOrderByOpen: schedules(
+    orderByOpen: [{dayStart: "desc"}, {labelShort: "desc"}]
+  ) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+  }
+  schedule_findManyWithRelations: schedules(take: 10) {
+    code
+    labelShort
+    labelLong
+    dayStart
+    dayEnd
+    theoreticalClocking1
+    theoreticalClocking2
+    theoreticalClocking3
+    theoreticalClocking4
+    userGroup
+    scheduleBolVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleNbrVals {
+      effectDate
+      fieldnameHelper
+      value
+    }
+    scheduleEnumVals {
+      fieldnameHelper
+      scheduleEnumStrVal {
+        value
+      }
+    }
+    scheduleShiftDetails {
+      hourStart
+      hourEnd
+      eventIfPresence {
+        code
+      }
+      eventIfAbsence {
+        code
+      }
+    }
+  }
+
+
+
+
+
+}

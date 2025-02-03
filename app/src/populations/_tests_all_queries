@@ -1,0 +1,139 @@
+query Tests_population {
+  population_findUniqueByName: population(name: "4_criteres") {
+    name
+    operatorLogical
+  }
+  population_findUnique: population(id: "00000000-0000-0000-9090-000000000001") {
+    name
+    operatorLogical
+  }
+  population_findUniqueWithRelations: population(name: "4_criteres") {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+  population_findFirst: populationFindFirst {
+    name
+    operatorLogical
+  }
+  population_findFirstSkip: populationFindFirst(skip: 1) {
+    name
+    operatorLogical
+  }
+  population_findFirstTake: populationFindFirst(take: 1) {
+    name
+    operatorLogical
+  }
+  population_findFirstWhere: populationFindFirst(where: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findFirstOrderBy: populationFindFirst(orderBy: {name: desc}) {
+    name
+    operatorLogical
+  }
+  population_findFirstCursor: populationFindFirst(cursor: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findFirstDistinct: populationFindFirst(distinct: allFields) {
+    name
+    operatorLogical
+  }
+  population_findFirstWhereOpen: populationFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    operatorLogical
+  }
+  population_findFirstOrderByOpen: populationFindFirst(
+    orderByOpen: [{operatorLogical: "desc"}, {name: "desc"}]
+  ) {
+    name
+    operatorLogical
+  }
+  population_findFirstWithRelations: populationFindFirst {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+  population_findMany: populations {
+    name
+    operatorLogical
+  }
+  population_findManySkip: populations(skip: 1) {
+    name
+    operatorLogical
+  }
+  population_findManyTake: populations(take: 1) {
+    name
+    operatorLogical
+  }
+  population_findManyWhere: populations(where: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findManyOrderBy: populations(orderBy: {name: desc}) {
+    name
+    operatorLogical
+  }
+  population_findManyCursor: populations(cursor: {name: "4_criteres"}) {
+    name
+    operatorLogical
+  }
+  population_findManyDistinct: populations(distinct: allFields) {
+    name
+    operatorLogical
+  }
+  population_findManyWhereOpen: populations(whereOpen: {name: {contains: "c"}}) {
+    name
+    operatorLogical
+  }
+  population_findManyOrderByOpen: populations(
+    orderByOpen: [{operatorLogical: "desc"}, {name: "desc"}]
+  ) {
+    name
+    operatorLogical
+  }
+  population_findManyWithRelations: populations {
+    name
+    operatorLogical
+    popCriterias {
+      name
+      table
+      field
+      fieldTypeHelper
+      operatorComparison
+      popCritValues {
+        valueBol
+        valueDat
+        valueNbr
+        valueStr
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+export enum COUNTER_EXEC_JOB_NAMES {
+  _TEST = '_TEST',
+  CALCULATION = 'CALCULATION',
+}

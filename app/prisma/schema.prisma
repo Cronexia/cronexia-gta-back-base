@@ -1,0 +1,223 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// ! Prisma 6 update : 👌 Split your Prisma schema into multiple files
+//    https://www.prisma.io/blog/organize-your-prisma-schema-with-multi-file-support
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator docs {
+  provider = "node node_modules/prisma-docs-generator"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---
+// ---
+// ---
+
+// ! Database structure definition
+
+// * 💼 Cronexia GTA
+
+// * 👪 Populations
+
+model Population {
+  // Cronexia, required internal fields
+  idPopulation String    @id @default(uuid()) @db.Uuid
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime? @updatedAt
+  createdBy    String    @default("admin")
+  updatedBy    String?
+
+  // ---
+
+  // ✨ @unique
+  name String @unique
+
+  // ---
+  operatorLogical operatorLogicalEnum @default(AND)
+
+  // ---
+
+  // 🔗 * Relations
+
+  // 👪⚗️ Populations criterias
+  popCriterias PopCriteria[]
+}
+
+// ---
+
+// * 👪⚗️ Populations criterias
+
+model PopCriteria {
+  // Cronexia, required internal fields
+  idPopCriteria String    @id @default(uuid()) @db.Uuid
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime? @updatedAt
+  createdBy     String    @default("admin")
+  updatedBy     String?
+
+  // ---
+
+  name            String?
+  table           populationTableEnum     @default(ResourceField)
+  field           String
+  fieldTypeHelper populationFieldTypeEnum
+
+  operatorComparison operatorComparisonEnum @default(equals)
+
+  // ---
+
+  // 🔗 * Relations
+
+  // 👪 Populations
+  population   Population @relation(fields: [populationId], references: [idPopulation])
+  populationId String     @db.Uuid
+
+  popCritValues PopCritValue[]
+}
+
+// ---
+
+// * 👪⚗️👌 Populations criterias values
+//      Allowing [1-n] value storage
+
+model PopCritValue {
+  // Cronexia, required internal fields
+  idPopCritValue String    @id @default(uuid()) @db.Uuid
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime? @updatedAt
+  createdBy      String    @default("admin")
+  updatedBy      String?
+
+  // ---
+
+  // 👌 Type enforced values
+  //      Both open values and 📚 Enum are stored here
+  //      TODO: 🌱 Store Enum references values instead (prevent error in case of renaming)
+  valueBol Boolean?
+  valueDat DateTime?
+  valueNbr Float?
+  valueStr String?
+
+  // ---
+
+  // 🔗 * Relations
+
+  // 👪⚗️ Populations criterias
+  popCriteria   PopCriteria @relation(fields: [popCriteriaId], references: [idPopCriteria])
+  popCriteriaId String      @db.Uuid
+}
+
+// ---
+// ---
+// ---
+
+
+// ---
+// ---
+// ---
+// ---
+// ---
+// ---
+// ---
+// ---
+// ---
+// ---
+
+// * 📚 ENUMs
+// 📕 ENUM standardization:
+//      enum name: PascalCase
+//      enum values: camelCase
+// TODO: 🌱 Normalize ENUMs
+
+enum populationTableEnum {
+  ResourceField
+  Resource
+  TodoCalendar
+  TodoCycle
+}
+
+enum populationFieldTypeEnum {
+  Boolean
+  Date
+  Number
+  String
+  EnumBoolean
+  EnumDate
+  EnumNumber
+  EnumString
+}
+
+// Prisma documentation
+//      https://www.prisma.io/docs/orm/reference/prisma-client-reference#and
+enum operatorLogicalEnum {
+  AND
+  OR
+  NOT
+}
+
+
+// Prisma documentation
+//      https://www.prisma.io/docs/orm/reference/prisma-client-reference#filter-conditions-and-operators
+enum operatorComparisonEnum {
+  equals // =
+  not // !=
+  in // IN
+  notIn // NOT IN
+  lowerThan // <
+  lowerThanOrEqual // <=
+  greaterThan // >
+  greaterThanOrEqual // >=
+  contains // xxx*xxx
+  startsWith // *xxx
+  endsWith // xxx*
+  // Full-Text Search is currently in Preview and only available for PostgreSQL and MySQL.
+  // To use search, you'll need to enable the fullTextSearch preview feature.
+  // search
+  range // first value >= results >= second value
+}
+
+// ---
+// ---
+// ---
+
+// * 📌🤡 Tutorial/Mock/Examples structures
+// Prisma tutorial
+model Article {
+  id          Int       @id @default(autoincrement())
+  title       String    @unique
+  description String?
+  body        String
+  published   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime? @updatedAt
+  author      User?     @relation(fields: [authorId], references: [id])
+  authorId    Int?
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String?
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  articles  Article[]
+}
+
+// 🏭 Boilerplate example définition
+model Example {
+  id        Int       @id @default(autoincrement())
+  name      String?
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+}

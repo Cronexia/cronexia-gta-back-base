@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": [
+      "ts-jest",
+      {
+        "astTransformers": {
+          "before": [
+            "../e2e-tests-directory/fix-graphql-transformer.ts",
+            "../e2e-tests-directory/fix-swagger-transformer.ts"
+          ]
+        }
+      }
+    ]
+  }
+}

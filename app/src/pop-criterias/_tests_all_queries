@@ -1,0 +1,202 @@
+query Tests_popCriteria {
+  popCriteria_findUnique: popCriteria(id: "00000000-0000-0000-909c-000000000001") {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findUniqueWithRelations: popCriteria(
+    id: "00000000-0000-0000-909c-000000000001"
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+  popCriteria_findFirst: popCriteriaFindFirst {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstSkip: popCriteriaFindFirst(skip: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstTake: popCriteriaFindFirst(take: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWhere: popCriteriaFindFirst(
+    where: {name: "Criteria_Boolean_isPointage_equals_true"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstOrderBy: popCriteriaFindFirst(orderBy: {name: desc}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstCursor: popCriteriaFindFirst(
+    cursor: {id: "00000000-0000-0000-909c-000000000001"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstDistinct: popCriteriaFindFirst(distinct: allFields) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWhereOpen: popCriteriaFindFirst(
+    whereOpen: {name: {contains: "c"}}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstOrderByOpen: popCriteriaFindFirst(
+    orderByOpen: [{table: "desc"}, {field: "desc"}]
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findFirstWithRelations: popCriteriaFindFirst {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+  popCriteria_findMany: popCriterias {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManySkip: popCriterias(skip: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyTake: popCriterias(take: 1) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWhere: popCriterias(
+    where: {name: "Criteria_Boolean_isPointage_equals_true"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyOrderBy: popCriterias(orderBy: {name: desc}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyCursor: popCriterias(
+    cursor: {id: "00000000-0000-0000-909c-000000000001"}
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyDistinct: popCriterias(distinct: allFields) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWhereOpen: popCriterias(whereOpen: {name: {contains: "c"}}) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyOrderByOpen: popCriterias(
+    orderByOpen: [{table: "desc"}, {field: "desc"}]
+  ) {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+  }
+  popCriteria_findManyWithRelations: popCriterias {
+    name
+    table
+    field
+    fieldTypeHelper
+    operatorComparison
+    population {
+      name
+      operatorLogical
+    }
+    popCritValues {
+      valueBol
+      valueDat
+      valueNbr
+      valueStr
+    }
+  }
+}
